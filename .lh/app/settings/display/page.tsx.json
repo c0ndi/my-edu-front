@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/settings/display/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1698795055447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698795160530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Separator } from \"@/components/ui/separator\"\n-import { DisplayForm } from \"@/app/examples/forms/display/display-form\"\n+import { DisplayForm } from \"./display-form\"\n \n export default function SettingsDisplayPage() {\n   return (\n     <div className=\"space-y-6\">\n"
+                }
+            ],
+            "date": 1698795055447,
+            "name": "Commit-0",
+            "content": "import { Separator } from \"@/components/ui/separator\"\nimport { DisplayForm } from \"@/app/examples/forms/display/display-form\"\n\nexport default function SettingsDisplayPage() {\n  return (\n    <div className=\"space-y-6\">\n      <div>\n        <h3 className=\"text-lg font-medium\">Display</h3>\n        <p className=\"text-sm text-muted-foreground\">\n          Turn items on or off to control what&apos;s displayed in the app.\n        </p>\n      </div>\n      <Separator />\n      <DisplayForm />\n    </div>\n  )\n}\n"
+        }
+    ]
+}

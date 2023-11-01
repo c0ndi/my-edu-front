@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/settings/notifications/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1698795055450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698795201587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { Separator } from \"@/components/ui/separator\"\n-import { NotificationsForm } from \"@/app/examples/forms/notifications/notifications-form\"\n+import { NotificationsForm } from \"./notifications-form\"\n \n export default function SettingsNotificationsPage() {\n   return (\n     <div className=\"space-y-6\">\n"
+                }
+            ],
+            "date": 1698795055450,
+            "name": "Commit-0",
+            "content": "import { Separator } from \"@/components/ui/separator\"\nimport { NotificationsForm } from \"@/app/examples/forms/notifications/notifications-form\"\n\nexport default function SettingsNotificationsPage() {\n  return (\n    <div className=\"space-y-6\">\n      <div>\n        <h3 className=\"text-lg font-medium\">Notifications</h3>\n        <p className=\"text-sm text-muted-foreground\">\n          Configure how you receive notifications.\n        </p>\n      </div>\n      <Separator />\n      <NotificationsForm />\n    </div>\n  )\n}\n"
+        }
+    ]
+}

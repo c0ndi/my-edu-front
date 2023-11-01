@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/settings/appearance/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1698795055448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698795148337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Separator } from \"@/components/ui/separator\"\n-import { AppearanceForm } from \"@/app/examples/forms/appearance/appearance-form\"\n+import { AppearanceForm } from \"./appearance-form\"\n+AppearanceForm\n \n export default function SettingsAppearancePage() {\n   return (\n     <div className=\"space-y-6\">\n"
+                }
+            ],
+            "date": 1698795055448,
+            "name": "Commit-0",
+            "content": "import { Separator } from \"@/components/ui/separator\"\nimport { AppearanceForm } from \"@/app/examples/forms/appearance/appearance-form\"\n\nexport default function SettingsAppearancePage() {\n  return (\n    <div className=\"space-y-6\">\n      <div>\n        <h3 className=\"text-lg font-medium\">Appearance</h3>\n        <p className=\"text-sm text-muted-foreground\">\n          Customize the appearance of the app. Automatically switch between day\n          and night themes.\n        </p>\n      </div>\n      <Separator />\n      <AppearanceForm />\n    </div>\n  )\n}\n"
+        }
+    ]
+}

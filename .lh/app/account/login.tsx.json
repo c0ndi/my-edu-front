@@ -1,0 +1,46 @@
+{
+    "sourceFile": "app/account/login.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1698797971981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698798087540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,25 @@\n } from \"@/components/ui/card\"\n import { Input } from \"@/components/ui/input\"\n import { Label } from \"@/components/ui/label\"\n \n+import {\n+  Form,\n+  FormControl,\n+  FormDescription,\n+  FormField,\n+  FormItem,\n+  FormLabel,\n+  FormMessage,\n+} from \"@/components/ui/form\"\n+import { Input } from \"@/components/ui/input\"\n+\n+const formSchema = z.object({\n+  username: z.string().min(2, {\n+    message: \"Username must be at least 2 characters.\",\n+  }),\n+})\n+\n export function CreateAccount() {\n   return (\n     <Card>\n       <CardHeader className=\"space-y-1\">\n"
+                },
+                {
+                    "date": 1698798098814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n \"use client\"\n \n+import { zodResolver } from \"@hookform/resolvers/zod\"\n+import { useForm } from \"react-hook-form\"\n+import * as z from \"zod\"\n+\n import { Button } from \"@/components/ui/button\"\n import { Icons } from \"@/components/ui/icons\"\n import {\n   Card,\n"
+                },
+                {
+                    "date": 1698798114812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,11 @@\n const formSchema = z.object({\n   username: z.string().min(2, {\n     message: \"Username must be at least 2 characters.\",\n   }),\n+  password: z.string().min(8, {\n+    message: \"Password must be at least 8 characters.\",\n+  }),\n })\n \n export function CreateAccount() {\n   return (\n"
+                },
+                {
+                    "date": 1698798136398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,16 +65,19 @@\n               Or continue with\n             </span>\n           </div>\n         </div>\n+        <Form {...form}>\n+\n         <div className=\"grid gap-2\">\n           <Label htmlFor=\"email\">Email</Label>\n           <Input id=\"email\" type=\"email\" placeholder=\"m@example.com\" />\n         </div>\n         <div className=\"grid gap-2\">\n           <Label htmlFor=\"password\">Password</Label>\n           <Input id=\"password\" type=\"password\" />\n         </div>\n+        </Form>\n       </CardContent>\n       <CardFooter>\n         <Button className=\"w-full\">Create account</Button>\n       </CardFooter>\n"
+                },
+                {
+                    "date": 1698798166916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,8 +36,14 @@\n   }),\n })\n \n export function CreateAccount() {\n+  const form = useForm<z.infer<typeof formSchema>>({\n+    resolver: zodResolver(formSchema),\n+    defaultValues: {\n+      username: \"\",\n+    },\n+  })\n   return (\n     <Card>\n       <CardHeader className=\"space-y-1\">\n         <CardTitle className=\"text-2xl\">Create an account</CardTitle>\n"
+                },
+                {
+                    "date": 1698798187024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,24 @@\n           </div>\n         </div>\n         <Form {...form}>\n           <div className=\"grid gap-2\">\n+            <FormField\n+              control={form.control}\n+              name=\"username\"\n+              render={({ field }) => (\n+                <FormItem>\n+                  <FormLabel>Username</FormLabel>\n+                  <FormControl>\n+                    <Input placeholder=\"shadcn\" {...field} />\n+                  </FormControl>\n+                  <FormDescription>\n+                    This is your public display name.\n+                  </FormDescription>\n+                  <FormMessage />\n+                </FormItem>\n+              )}\n+            />\n             <Label htmlFor=\"email\">Email</Label>\n             <Input id=\"email\" type=\"email\" placeholder=\"m@example.com\" />\n           </div>\n           <div className=\"grid gap-2\">\n"
+                },
+                {
+                    "date": 1698798201271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,8 @@\n                   <FormMessage />\n                 </FormItem>\n               )}\n             />\n-\n           </div>\n           <div className=\"grid gap-2\">\n             <Label htmlFor=\"password\">Password</Label>\n             <Input id=\"password\" type=\"password\" />\n"
+                }
+            ],
+            "date": 1698797971981,
+            "name": "Commit-0",
+            "content": "\"use client\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Icons } from \"@/components/ui/icons\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nexport function CreateAccount() {\n  return (\n    <Card>\n      <CardHeader className=\"space-y-1\">\n        <CardTitle className=\"text-2xl\">Create an account</CardTitle>\n        <CardDescription>\n          Enter your email below to create your account\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"grid gap-4\">\n        <div className=\"grid grid-cols-2 gap-6\">\n          <Button variant=\"outline\">\n            <Icons.gitHub className=\"mr-2 h-4 w-4\" />\n            Github\n          </Button>\n          <Button variant=\"outline\">\n            <Icons.google className=\"mr-2 h-4 w-4\" />\n            Google\n          </Button>\n        </div>\n        <div className=\"relative\">\n          <div className=\"absolute inset-0 flex items-center\">\n            <span className=\"w-full border-t\" />\n          </div>\n          <div className=\"relative flex justify-center text-xs uppercase\">\n            <span className=\"bg-background px-2 text-muted-foreground\">\n              Or continue with\n            </span>\n          </div>\n        </div>\n        <div className=\"grid gap-2\">\n          <Label htmlFor=\"email\">Email</Label>\n          <Input id=\"email\" type=\"email\" placeholder=\"m@example.com\" />\n        </div>\n        <div className=\"grid gap-2\">\n          <Label htmlFor=\"password\">Password</Label>\n          <Input id=\"password\" type=\"password\" />\n        </div>\n      </CardContent>\n      <CardFooter>\n        <Button className=\"w-full\">Create account</Button>\n      </CardFooter>\n    </Card>\n  )\n}\n"
+        }
+    ]
+}

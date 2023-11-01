@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/settings/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1698794930863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698795371204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,25 +11,25 @@\n \n const sidebarNavItems = [\n   {\n     title: \"Profile\",\n-    href: \"/examples/forms\",\n+    href: \"/settings/forms\",\n   },\n   {\n     title: \"Account\",\n-    href: \"/examples/forms/account\",\n+    href: \"/settings/account\",\n   },\n   {\n     title: \"Appearance\",\n-    href: \"/examples/forms/appearance\",\n+    href: \"/settings/appearance\",\n   },\n   {\n     title: \"Notifications\",\n-    href: \"/examples/forms/notifications\",\n+    href: \"/settings/notifications\",\n   },\n   {\n     title: \"Display\",\n-    href: \"/examples/forms/display\",\n+    href: \"/settings/display\",\n   },\n ]\n \n interface SettingsLayoutProps {\n@@ -40,16 +40,16 @@\n   return (\n     <>\n       <div className=\"md:hidden\">\n         <Image\n-          src=\"/examples/forms-light.png\"\n+          src=\"/settings/forms-light.png\"\n           width={1280}\n           height={791}\n           alt=\"Forms\"\n           className=\"block dark:hidden\"\n         />\n         <Image\n-          src=\"/examples/forms-dark.png\"\n+          src=\"/settings/forms-dark.png\"\n           width={1280}\n           height={791}\n           alt=\"Forms\"\n           className=\"hidden dark:block\"\n"
+                },
+                {
+                    "date": 1698795435919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n const sidebarNavItems = [\n   {\n     title: \"Profile\",\n-    href: \"/settings/forms\",\n+    href: \"/settings/\",\n   },\n   {\n     title: \"Account\",\n     href: \"/settings/account\",\n"
+                },
+                {
+                    "date": 1698796336874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,25 +37,8 @@\n }\n \n export default function SettingsLayout({ children }: SettingsLayoutProps) {\n   return (\n-    <>\n-      <div className=\"md:hidden\">\n-        <Image\n-          src=\"/settings/forms-light.png\"\n-          width={1280}\n-          height={791}\n-          alt=\"Forms\"\n-          className=\"block dark:hidden\"\n-        />\n-        <Image\n-          src=\"/settings/forms-dark.png\"\n-          width={1280}\n-          height={791}\n-          alt=\"Forms\"\n-          className=\"hidden dark:block\"\n-        />\n-      </div>\n       <div className=\"hidden space-y-6 p-10 pb-16 md:block\">\n         <div className=\"space-y-0.5\">\n           <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n           <p className=\"text-muted-foreground\">\n@@ -69,7 +52,6 @@\n           </aside>\n           <div className=\"flex-1 lg:max-w-2xl\">{children}</div>\n         </div>\n       </div>\n-    </>\n   )\n }\n"
+                },
+                {
+                    "date": 1698796345369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\n \n export default function SettingsLayout({ children }: SettingsLayoutProps) {\n   return (\n-    <div className=\"hidden space-y-6 p-10 pb-16\">\n+    <div className=\"block space-y-6 p-10 pb-16\">\n       <div className=\"space-y-0.5\">\n         <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n         <p className=\"text-muted-foreground\">\n           Manage your account settings and set e-mail preferences.\n"
+                },
+                {
+                    "date": 1698796379558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\n \n export default function SettingsLayout({ children }: SettingsLayoutProps) {\n   return (\n-    <div className=\"block space-y-6 p-10 pb-16\">\n+    <div className=\"block space-y-6 pb-16 md:p-10\">\n       <div className=\"space-y-0.5\">\n         <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n         <p className=\"text-muted-foreground\">\n           Manage your account settings and set e-mail preferences.\n"
+                }
+            ],
+            "date": 1698794930863,
+            "name": "Commit-0",
+            "content": "import { Metadata } from \"next\"\nimport Image from \"next/image\"\n\nimport { Separator } from \"@/components/ui/separator\"\nimport { SidebarNav } from \"./components/sidebar-nav\"\n\nexport const metadata: Metadata = {\n  title: \"Forms\",\n  description: \"Advanced form example using react-hook-form and Zod.\",\n}\n\nconst sidebarNavItems = [\n  {\n    title: \"Profile\",\n    href: \"/examples/forms\",\n  },\n  {\n    title: \"Account\",\n    href: \"/examples/forms/account\",\n  },\n  {\n    title: \"Appearance\",\n    href: \"/examples/forms/appearance\",\n  },\n  {\n    title: \"Notifications\",\n    href: \"/examples/forms/notifications\",\n  },\n  {\n    title: \"Display\",\n    href: \"/examples/forms/display\",\n  },\n]\n\ninterface SettingsLayoutProps {\n  children: React.ReactNode\n}\n\nexport default function SettingsLayout({ children }: SettingsLayoutProps) {\n  return (\n    <>\n      <div className=\"md:hidden\">\n        <Image\n          src=\"/examples/forms-light.png\"\n          width={1280}\n          height={791}\n          alt=\"Forms\"\n          className=\"block dark:hidden\"\n        />\n        <Image\n          src=\"/examples/forms-dark.png\"\n          width={1280}\n          height={791}\n          alt=\"Forms\"\n          className=\"hidden dark:block\"\n        />\n      </div>\n      <div className=\"hidden space-y-6 p-10 pb-16 md:block\">\n        <div className=\"space-y-0.5\">\n          <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n          <p className=\"text-muted-foreground\">\n            Manage your account settings and set e-mail preferences.\n          </p>\n        </div>\n        <Separator className=\"my-6\" />\n        <div className=\"flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0\">\n          <aside className=\"-mx-4 lg:w-1/5\">\n            <SidebarNav items={sidebarNavItems} />\n          </aside>\n          <div className=\"flex-1 lg:max-w-2xl\">{children}</div>\n        </div>\n      </div>\n    </>\n  )\n}\n"
+        }
+    ]
+}

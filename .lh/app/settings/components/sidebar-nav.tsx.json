@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/settings/components/sidebar-nav.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1698795055448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698796643430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n   return (\n     <nav\n       className={cn(\n-        \"flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1\",\n+        \"flex space-x-1lg:flex-col lg:space-x-0 lg:space-y-1\",\n         className\n       )}\n       {...props}\n     >\n"
+                },
+                {
+                    "date": 1698796655603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             buttonVariants({ variant: \"ghost\" }),\n             pathname === item.href\n               ? \"bg-muted hover:bg-muted\"\n               : \"hover:bg-transparent hover:underline\",\n-            \"justify-start\"\n+            \"justify-start scale-75\"\n           )}\n         >\n           {item.title}\n         </Link>\n"
+                },
+                {
+                    "date": 1698796661994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n   return (\n     <nav\n       className={cn(\n-        \"flex space-x-1lg:flex-col lg:space-x-0 lg:space-y-1\",\n+        \"flex space-x-1 scale-75 lg:flex-col lg:space-x-0 lg:space-y-1\",\n         className\n       )}\n       {...props}\n     >\n@@ -32,9 +32,9 @@\n             buttonVariants({ variant: \"ghost\" }),\n             pathname === item.href\n               ? \"bg-muted hover:bg-muted\"\n               : \"hover:bg-transparent hover:underline\",\n-            \"justify-start scale-75\"\n+            \"justify-start\"\n           )}\n         >\n           {item.title}\n         </Link>\n"
+                },
+                {
+                    "date": 1698796729146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n   return (\n     <nav\n       className={cn(\n-        \"flex space-x-1 scale-75 lg:flex-col lg:space-x-0 lg:space-y-1\",\n+        \"flex space-x-1 lg:flex-col lg:space-x-0 lg:space-y-1\",\n         className\n       )}\n       {...props}\n     >\n"
+                },
+                {
+                    "date": 1698796899724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n \n   return (\n     <nav\n       className={cn(\n-        \"flex space-x-1 lg:flex-col lg:space-x-0 lg:space-y-1\",\n+        \"flex space-x-1 overflow-x-scroll lg:flex-col lg:space-x-0 lg:space-y-1\",\n         className\n       )}\n       {...props}\n     >\n"
+                }
+            ],
+            "date": 1698795055448,
+            "name": "Commit-0",
+            "content": "\"use client\"\n\nimport Link from \"next/link\"\nimport { usePathname } from \"next/navigation\"\n\nimport { cn } from \"@/lib/utils\"\nimport { buttonVariants } from \"@/components/ui/button\"\n\ninterface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {\n  items: {\n    href: string\n    title: string\n  }[]\n}\n\nexport function SidebarNav({ className, items, ...props }: SidebarNavProps) {\n  const pathname = usePathname()\n\n  return (\n    <nav\n      className={cn(\n        \"flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1\",\n        className\n      )}\n      {...props}\n    >\n      {items.map((item) => (\n        <Link\n          key={item.href}\n          href={item.href}\n          className={cn(\n            buttonVariants({ variant: \"ghost\" }),\n            pathname === item.href\n              ? \"bg-muted hover:bg-muted\"\n              : \"hover:bg-transparent hover:underline\",\n            \"justify-start\"\n          )}\n        >\n          {item.title}\n        </Link>\n      ))}\n    </nav>\n  )\n}\n"
+        }
+    ]
+}
