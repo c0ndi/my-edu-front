@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1699189150725,
@@ -64,6 +64,14 @@
                 {
                     "date": 1699219523629,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,8 @@\n     <html lang={locale} suppressHydrationWarning>\n       <body className={inter.className}>\n         <ThemeProvider\n           attribute=\"class\"\n-          defaultTheme=\"system\"\n-          enableSystem\n           disableTransitionOnChange\n         >\n           {children}\n           <Toaster />\n"
+                },
+                {
+                    "date": 1699219548977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n   if (!isValidLocale) notFound();\n   return (\n     <html lang={locale} suppressHydrationWarning>\n       <body className={inter.className}>\n+        \n         <ThemeProvider\n           attribute=\"class\"\n           defaultTheme='light'\n           disableTransitionOnChange\n"
+                },
+                {
+                    "date": 1699219561132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n   params: {\n     locale: string\n   }\n }) {\n+  console.log(locale);\n+  \n   const isValidLocale = locales.some((cur) => cur === locale);\n   if (!isValidLocale) notFound();\n   return (\n     <html lang={locale} suppressHydrationWarning>\n"
                 }
             ],
             "date": 1699189150725,

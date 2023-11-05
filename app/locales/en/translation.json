@@ -6,14 +6,13 @@
         "name": "English"
       },
       "lang-2": {
-        "locale": "pl",
+        "locale": "",
         "name": "Polski"
       },
       "lang-3": {
         "locale": "ua",
         "name": "Українська"
       },
-
       "lang-4": {
         "locale": "de",
         "name": "Deutsch"

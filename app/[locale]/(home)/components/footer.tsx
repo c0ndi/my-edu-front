@@ -9,8 +9,6 @@ type Props = {}
 export default function Footer({ }: Props) {
   const t = useTranslations("footer")
 
-  console.log(t);
-
   return (
     <footer className='border-t border-[#2A2A2A]'>
       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>

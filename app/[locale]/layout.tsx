@@ -3,7 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ui/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
-import { notFound } from 'next/navigation'
+import { notFound, useSearchParams } from 'next/navigation'
+import { headers } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme='light'
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}
