@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1699188811402,
@@ -32,6 +32,18 @@
                 {
                     "date": 1699221659706,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n   locales: [\"en\", \"pl\", \"ua\", \"de\"],\n+  defaultLocale: \"pl\",\n });\n \n export const config = {\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n"
+                },
+                {
+                    "date": 1699221971129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,19 @@\n \n export const config = {\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n };\n+\n+let locales = ['en-US', 'nl-NL', 'nl']\n+ \n+export function middleware(request) {\n+  const { pathname } = request.nextUrl\n+  const pathnameHasLocale = locales.some(\n+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`\n+  )\n+ \n+  if (pathnameHasLocale) return\n+ \n+  const locale = getLocale(request)\n+  request.nextUrl.pathname = `/${locale}${pathname}`\n+  return Response.redirect(request.nextUrl)\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699221989387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,7 @@\n   if (pathnameHasLocale) return;\n \n   const locale = getLocale(request);\n   request.nextUrl.pathname = `/${locale}${pathname}`;\n+  \n   return Response.redirect(request.nextUrl);\n }\n"
+                },
+                {
+                    "date": 1699222125479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,17 @@\n \n let locales = [\"en-US\", \"nl-NL\", \"nl\"];\n \n export function middleware(request) {\n-  const { pathname } = request.nextUrl;\n+  const { pathname } = request.nextUrl\n   const pathnameHasLocale = locales.some(\n     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`\n-  );\n-\n-  if (pathnameHasLocale) return;\n-\n-  const locale = getLocale(request);\n-  request.nextUrl.pathname = `/${locale}${pathname}`;\n-\n-  return Response.redirect(request.nextUrl);\n+  )\n+ \n+  if (pathnameHasLocale) return\n+ \n+  const locale = getLocale(request)\n+  \n+  request.nextUrl.pathname = `/${locale}${pathname}`\n+  return Response.redirect(request.nextUrl)\n }\n+ \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1699188811402,

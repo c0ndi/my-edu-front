@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1699189471729,
@@ -36,6 +36,14 @@
                 {
                     "date": 1699221334164,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { getRequestConfig } from \"next-intl/server\";\n \n export default getRequestConfig(async ({ locale }: { locale: string }) => ({\n-  messages: (await import(`app/locales/${locale}/translation.json`)).default,\n+  messages: (await import(`app/locales/${locale}/translation.json`)),\n }));\n"
+                },
+                {
+                    "date": 1699222154679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { getRequestConfig } from \"next-intl/server\";\n \n export default getRequestConfig(async ({ locale }: { locale: string }) => ({\n-  messages: await import(`app/locales/${locale}/translation.json`),\n+  messages: await import(`app/locales/${locale}/translation.json`).default,\n }));\n"
+                },
+                {
+                    "date": 1699222176403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { getRequestConfig } from \"next-intl/server\";\n \n export default getRequestConfig(async ({ locale }: { locale: string }) => ({\n-  messages: await import(`app/locales/${locale}/translation.json`).default,\n+  messages: (await import(`app/locales/${locale}/translation.json`)).default,\n }));\n"
                 }
             ],
             "date": 1699189471729,
