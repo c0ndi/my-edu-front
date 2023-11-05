@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1699189150725,
@@ -60,6 +60,10 @@
                 {
                     "date": 1699200390984,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import './globals.css'\n import { ThemeProvider } from '@/components/ui/theme-provider'\n import { Toaster } from '@/components/ui/toaster'\n import { notFound } from 'next/navigation'\n-import { NextIntlClientProvider } from 'next-intl';\n \n const inter = Inter({ subsets: ['latin'] })\n \n export const metadata: Metadata = {\n"
+                },
+                {
+                    "date": 1699219523629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,8 @@\n     <html lang={locale} suppressHydrationWarning>\n       <body className={inter.className}>\n         <ThemeProvider\n           attribute=\"class\"\n-          defaultTheme=\"system\"\n-          enableSystem\n           disableTransitionOnChange\n         >\n           {children}\n           <Toaster />\n"
                 }
             ],
             "date": 1699189150725,
