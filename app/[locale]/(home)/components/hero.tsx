@@ -11,7 +11,7 @@ type Props = {}
 export default function Hero({ }: Props) {
   const t = useTranslations("hero")
   return (
-    <section className='max-w-[1280px] flex flex-col mx-auto max-sm:py-6 px-2 overflow-hidden'>
+    <section className='max-w-[1280px] flex flex-col mx-auto max-lg:py-6 px-2 overflow-hidden'>
       <div className='w-full flex items-center max-lg:flex-col'>
         <div className='w-1/2 max-lg:w-full'>
           <Badge text={t("badge")} />
