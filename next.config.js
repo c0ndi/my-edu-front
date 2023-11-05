@@ -3,10 +3,4 @@ const withNextIntl = require("next-intl/plugin")(
   "./i18n.ts"
 );
 
-module.exports = withNextIntl({
-  i18n: {
-    locales: ["pl", "en", "ua", "de"],
-    defaultLocale: "pl",
-    localeDetection: false,
-  },
-});
+module.exports = withNextIntl({});
