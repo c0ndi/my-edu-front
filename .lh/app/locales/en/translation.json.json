@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 19,
             "patches": [
                 {
                     "date": 1699193588259,
@@ -80,6 +80,10 @@
                 {
                     "date": 1699220154530,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n       \"lang-3\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n-\n       \"lang-4\": {\n         \"locale\": \"de\",\n         \"name\": \"Deutsch\"\n       }\n"
+                },
+                {
+                    "date": 1699220543684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"locale\": \"en\",\n         \"name\": \"English\"\n       },\n       \"lang-2\": {\n-        \"locale\": \"\",\n+        \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n"
                 }
             ],
             "date": 1699193588259,

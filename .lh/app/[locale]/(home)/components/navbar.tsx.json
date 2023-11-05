@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 86,
+            "activePatchIndex": 89,
             "patches": [
                 {
                     "date": 1699197844420,
@@ -352,6 +352,18 @@
                 {
                     "date": 1699200247162,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n         <Logo />\n \n         <Popover>\n-          <PopoverTrigger asChild className='ml-6'>\n+          <PopoverTrigger asChild className='ml-6 max-xs:ml-auto'>\n             <Button className='flex items-center gap-2 font-light'>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n"
+                },
+                {
+                    "date": 1699220508617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,17 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n+  const res = new Array(4).fill(0).map((_, i) => (\n+    <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n+      <Button className='text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}</Button>\n+    </Link>\n+  ))\n+\n+  console.log(res);\n+  \n+\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699220599170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,16 +29,14 @@\n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n   const res = new Array(4).fill(0).map((_, i) => (\n-    <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n-      <Button className='text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}</Button>\n-    </Link>\n+    return {\n+      href: `/${t(`langs.lang-${i + 1}.locale`)}`,\n+      name: t(`langs.lang-${i + 1}.name`)\n+    }\n   ))\n \n-  console.log(res);\n-\n-\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699220606302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,14 +28,14 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n-  const res = new Array(4).fill(0).map((_, i) => (\n+  const res = new Array(4).fill(0).map((_, i) => {\n     return {\n     href: `/${t(`langs.lang-${i + 1}.locale`)}`,\n     name: t(`langs.lang-${i + 1}.name`)\n   }\n-  ))\n+})\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n"
                 }
             ],
             "date": 1699197844420,
