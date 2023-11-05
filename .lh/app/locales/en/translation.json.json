@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1699193588259,
@@ -64,6 +64,14 @@
                 {
                     "date": 1699200106877,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         \"name\": \"English\"\n       },\n       \"lang-2\": {\n         \"locale\": \"pl\",\n-        \"name\": \"Polish\"\n+        \"name\": \"Polski\"\n       },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n"
+                },
+                {
+                    "date": 1699219107637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"locale\": \"en\",\n         \"name\": \"English\"\n       },\n       \"lang-2\": {\n-        \"locale\": \"pl\",\n+        \"locale\": \"\",\n         \"name\": \"Polski\"\n       },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n"
+                },
+                {
+                    "date": 1699219147201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"locale\": \"en\",\n         \"name\": \"English\"\n       },\n       \"lang-2\": {\n-        \"locale\": \"\",\n+        \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n"
                 }
             ],
             "date": 1699193588259,

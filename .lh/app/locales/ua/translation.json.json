@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1699193645509,
@@ -60,6 +60,14 @@
                 {
                     "date": 1699199580970,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,23 @@\n {\n   \"navbar\": {\n     \"langs\": {\n-      \"lang-2\": {\n-        \"locale\": \"pl\",\n-        \"name\": \"Польська\"\n-      },\n       \"lang-1\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n+      \"lang-2\": {\n+        \"locale\": \"pl\",\n+        \"name\": \"Polski\"\n+      },\n+\n       \"lang-3\": {\n         \"locale\": \"en\",\n-        \"name\": \"Англійська\"\n+        \"name\": \"English\"\n       },\n       \"lang-4\": {\n         \"locale\": \"de\",\n-        \"name\": \"Німецька\"\n+        \"name\": \"Deutsch\"\n       }\n     },\n     \"dashboardButton\": {\n       \"text\": \"панелі\",\n"
+                },
+                {
+                    "date": 1699219101757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n       \"lang-2\": {\n-        \"locale\": \"pl\",\n+        \"locale\": \"\",\n         \"name\": \"Polski\"\n       },\n \n       \"lang-3\": {\n"
+                },
+                {
+                    "date": 1699219158426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n       \"lang-2\": {\n-        \"locale\": \"\",\n+        \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n \n       \"lang-3\": {\n"
                 }
             ],
             "date": 1699193645509,
