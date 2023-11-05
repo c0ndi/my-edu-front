@@ -2,12 +2,12 @@
   "navbar": {
     "langs": {
       "lang-1": {
-        "locale": "en",
-        "name": "English"
-      },
-      "lang-2": {
         "locale": "pl",
         "name": "Polski"
+      },
+      "lang-2": {
+        "locale": "en",
+        "name": "English"
       },
       "lang-3": {
         "locale": "ua",

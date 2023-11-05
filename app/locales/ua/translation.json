@@ -2,21 +2,20 @@
   "navbar": {
     "langs": {
       "lang-1": {
-        "locale": "ua",
-        "name": "Українська"
+        "locale": "de",
+        "name": "Deutsch"
       },
       "lang-2": {
         "locale": "pl",
         "name": "Polski"
       },
-
       "lang-3": {
-        "locale": "en",
-        "name": "English"
+        "locale": "ua",
+        "name": "Українська"
       },
       "lang-4": {
-        "locale": "de",
-        "name": "Deutsch"
+        "locale": "en",
+        "name": "English"
       }
     },
     "dashboardButton": {

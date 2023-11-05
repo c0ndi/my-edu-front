@@ -6,16 +6,16 @@
         "name": "Polski"
       },
       "lang-2": {
-        "locale": "ua",
-        "name": "Українська"
-      },
-      "lang-3": {
         "locale": "en",
         "name": "English"
       },
+      "lang-3": {
+        "locale": "ua",
+        "name": "Українська"
+      },
       "lang-4": {
         "locale": "de",
-        "name": "Niemiecki"
+        "name": "Deutsch"
       }
     },
     "dashboardButton": {
