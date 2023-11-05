@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 19,
             "patches": [
                 {
                     "date": 1699193645509,
@@ -80,6 +80,10 @@
                 {
                     "date": 1699220956330,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,22 @@\n {\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n-        \"locale\": \"ua\",\n-        \"name\": \"Українська\"\n+        \"locale\": \"de\",\n+        \"name\": \"Deutsch\"\n       },\n       \"lang-2\": {\n         \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n-\n       \"lang-3\": {\n+        \"locale\": \"ua\",\n+        \"name\": \"Українська\"\n+      },\n+      \"lang-4\": {\n         \"locale\": \"en\",\n         \"name\": \"English\"\n-      },\n-      \"lang-4\": {\n-        \"locale\": \"de\",\n-        \"name\": \"Deutsch\"\n       }\n     },\n     \"dashboardButton\": {\n       \"text\": \"панелі\",\n"
+                },
+                {
+                    "date": 1699220982634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n {\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n-        \"locale\": \"de\",\n-        \"name\": \"Deutsch\"\n-      },\n-      \"lang-2\": {\n         \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n+      \"lang-2\": {\n+        \"locale\": \"en\",\n+        \"name\": \"English\"\n+      },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n       \"lang-4\": {\n-        \"locale\": \"en\",\n-        \"name\": \"English\"\n+        \"locale\": \"de\",\n+        \"name\": \"Deutsch\"\n       }\n     },\n     \"dashboardButton\": {\n       \"text\": \"панелі\",\n"
                 }
             ],
             "date": 1699193645509,
