@@ -14,7 +14,7 @@ export default function About({ }: Props) {
           <p className='text-[#E54141] font-extrabold'>{t("subheading")}</p>
           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-2xl'>{t("heading")}</h2>
 
-          <Accordion type="single" collapsible className='mt-12'>
+          <Accordion type="single" collapsible className='mt-12 text-[#e9e9e9]'>
             {new Array(5).fill(0).map((_, i) => (
               <AccordionItem value={`item-${i + 1}`} key={i}>
                 <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>

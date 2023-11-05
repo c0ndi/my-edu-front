@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 type Props = {}
@@ -18,10 +17,10 @@ export default function App({ }: Props) {
       </div>
 
       <Link href={t("aboutButton.link")}>
-        <Button>
+        <button className='font-medium bg-[#e9e9e9] hover:bg-[#e9e9e9]/90 text-sm py-2 px-3 rounded-md text-black w-full transition-all'>
           {t("aboutButton.text")}
-        </Button>
+        </button>
       </Link>
-    </section>
+    </section >
   )
 }

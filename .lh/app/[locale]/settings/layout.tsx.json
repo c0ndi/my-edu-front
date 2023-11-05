@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1699200404288,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699224897472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,20 +37,28 @@\n \n export default function SettingsLayout({ children }: SettingsLayoutProps) {\n   return (\n     <div className=\"block space-y-6 pb-16 p-4 md:p-10\">\n-      <div className=\"space-y-0.5\">\n-        <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n-        <p className=\"text-muted-foreground\">\n-          Manage your account settings and set e-mail preferences.\n-        </p>\n-      </div>\n-      <Separator className=\"my-6\" />\n-      <div className=\"flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0\">\n-        <aside className=\"-mx-4 lg:w-1/5\">\n-          <SidebarNav items={sidebarNavItems} />\n-        </aside>\n-        <div className=\"flex-1 lg:max-w-2xl\">{children}</div>\n-      </div>\n+      <ThemeProvider\n+        attribute=\"class\"\n+        defaultTheme='dark'\n+        enableSystem={false}\n+        disableTransitionOnChange\n+      >\n+\n+        <div className=\"space-y-0.5\">\n+          <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n+          <p className=\"text-muted-foreground\">\n+            Manage your account settings and set e-mail preferences.\n+          </p>\n+        </div>\n+        <Separator className=\"my-6\" />\n+        <div className=\"flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0\">\n+          <aside className=\"-mx-4 lg:w-1/5\">\n+            <SidebarNav items={sidebarNavItems} />\n+          </aside>\n+          <div className=\"flex-1 lg:max-w-2xl\">{children}</div>\n+        </div>\n+      </ThemeProvider>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1699224903073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Metadata } from \"next\"\n \n import { Separator } from \"@/components/ui/separator\"\n import { SidebarNav } from \"./components/sidebar-nav\"\n+import { ThemeProvider } from \"@/components/ui/theme-provider\"\n \n export const metadata: Metadata = {\n   title: \"Forms\",\n   description: \"Advanced form example using react-hook-form and Zod.\",\n@@ -43,9 +44,8 @@\n         defaultTheme='dark'\n         enableSystem={false}\n         disableTransitionOnChange\n       >\n-\n         <div className=\"space-y-0.5\">\n           <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n           <p className=\"text-muted-foreground\">\n             Manage your account settings and set e-mail preferences.\n"
+                },
+                {
+                    "date": 1699225264546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,14 +38,9 @@\n \n export default function SettingsLayout({ children }: SettingsLayoutProps) {\n   return (\n     <div className=\"block space-y-6 pb-16 p-4 md:p-10\">\n-      <ThemeProvider\n-        attribute=\"class\"\n-        defaultTheme='dark'\n-        enableSystem={false}\n-        disableTransitionOnChange\n-      >\n+  \n         <div className=\"space-y-0.5\">\n           <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n           <p className=\"text-muted-foreground\">\n             Manage your account settings and set e-mail preferences.\n"
                 }
             ],
             "date": 1699200404288,

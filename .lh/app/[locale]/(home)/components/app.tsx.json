@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 32,
+            "activePatchIndex": 36,
             "patches": [
                 {
                     "date": 1699190060094,
@@ -136,6 +136,22 @@
                 {
                     "date": 1699223651855,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n export default function App({ }: Props) {\n   const t = useTranslations(\"app\")\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n+    <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-3 overflow-hidden'>\n       <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n         <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-md:text-2xl'>{t(\"subheading\")}</h2>\n \n"
+                },
+                {
+                    "date": 1699226135545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,14 @@\n       </div>\n \n       <Link href={t(\"aboutButton.link\")}>\n         <Button>\n+\n+          <button className='bg-primary text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}</button>\n+\n           {t(\"aboutButton.text\")}\n-        </Button>\n-      </Link>\n-    </section>\n+        </button>\n+      </Button>\n+    </Link>\n+    </section >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699226147930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import React from 'react'\n+import { useTranslations } from 'next-intl'\n+import { Button } from '@/components/ui/button'\n+import Link from 'next/link'\n+\n+type Props = {}\n+\n+export default function App({ }: Props) {\n+  const t = useTranslations(\"app\")\n+\n+  return (\n+    <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-3 overflow-hidden'>\n+      <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n+        <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n+        <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-md:text-2xl'>{t(\"subheading\")}</h2>\n+\n+        <p className='text-center font-medium text-lg text-[#e9e9e9] py-4 max-lg:text-base'>{t(\"description\")}</p>\n+      </div>\n+\n+      <Link href={t(\"aboutButton.link\")}>\n+        <button className='bg-primary text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}\n+          {t(\"aboutButton.text\")}\n+        </button>\n+      </Link>\n+    </section >\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699226342297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         <p className='text-center font-medium text-lg text-[#e9e9e9] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n       <Link href={t(\"aboutButton.link\")}>\n-        <button className='bg-primary text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full font-light'>\n+        <button className='font-medium bg-primary text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full font-light'>\n           {t(\"aboutButton.text\")}\n         </button>\n       </Link>\n     </section >\n"
+                },
+                {
+                    "date": 1699226414110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <p className='text-center font-medium text-lg text-[#e9e9e9] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n       <Link href={t(\"aboutButton.link\")}>\n-        <button className='font-medium bg-primary text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full'>\n+        <button className='font-medium bg-[240 10% 3.9%] text-primary-foreground hover:bg-primary/90 text-sm py-2 px-3 rounded-md text-black w-full'>\n           {t(\"aboutButton.text\")}\n         </button>\n       </Link>\n     </section >\n"
                 }
             ],
             "date": 1699190060094,

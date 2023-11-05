@@ -36,7 +36,7 @@ export default function Navbar({ }: Props) {
 
         <Popover>
           <PopoverTrigger asChild className='ml-6 max-xs:ml-auto'>
-            <Button className='flex items-center gap-2 font-light'>
+            <button className='border border-[#e7e7e7] h-7 px-3 gap-2 font-light inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
               {t("langs.lang-1.name")}
 
               <Image
@@ -45,13 +45,15 @@ export default function Navbar({ }: Props) {
                 width={10}
                 height={10}
               />
-            </Button>
+            </button>
           </PopoverTrigger>
-          <PopoverContent className="w-max bg-white border-[#E4E4E7]">
+          <PopoverContent className="w-max p-3 bg-white border-[#E4E4E4]">
             <div className='flex flex-col gap-3'>
               {new Array(4).fill(0).map((_, i) => (
                 <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>
-                  <Button className='text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}</Button>
+                  <button className='border w-full border-[#f7f7f7] bg-[#f5f5f5] h-7 px-3 gap-2 font-light inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'>
+                    {t(`langs.lang-${i + 1}.name`)}
+                  </button>
                 </Link>
               ))}
             </div>
@@ -59,11 +61,11 @@ export default function Navbar({ }: Props) {
         </Popover>
 
         <Link href={t("dashboardButton.link")} className='ml-auto max-xs:hidden'>
-          <Button variant={"secondary"} size={"lg"}>
+          <button className="font-medium h-10 px-8 py-2 bg-[#131313] text-white hover:bg-[#131313]/90 gap-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
             {t("dashboardButton.text")}
-          </Button>
+          </button>
         </Link>
       </div>
-    </nav>
+    </nav >
   )
 }

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1699189342794,
@@ -120,6 +120,18 @@
                 {
                     "date": 1699200383952,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import Image from 'next/image'\n import Hero from './components/hero'\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n"
+                },
+                {
+                    "date": 1699225390461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n export default function Home() {\n   return (\n     <main>\n+\n       <div className='bg-[#fff]'>\n         <Navbar />\n       </div>\n       <div className='bg-[#fcfcfc]'>\n"
+                },
+                {
+                    "date": 1699225462227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n \n export default function Home() {\n   return (\n     <main>\n-\n       <div className='bg-[#fff]'>\n         <Navbar />\n       </div>\n       <div className='bg-[#fcfcfc]'>\n"
+                },
+                {
+                    "date": 1699225506234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,7 @@\n         <Footer />\n       </div>\n     </main >\n   )\n-}\n\\ No newline at end of file\n+}\n+\n+Home.theme = \"light\"\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1699189342794,
