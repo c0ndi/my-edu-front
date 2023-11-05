@@ -19,12 +19,12 @@ export default function Hero({ }: Props) {
           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t("description")}</p>
           <div className='flex gap-3 max-sm:flex-col'>
             <Link href={t("dashboardButton.link")}>
-              <button className="font-medium h-10 px-8 py-2 bg-[#131313] text-white hover:bg-[#131313]/90 gap-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
+              <button className="max-sm:w-full font-medium h-10 px-8 py-2 bg-[#131313] text-white hover:bg-[#131313]/90 gap-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
                 {t("dashboardButton.text")}
               </button>
             </Link>
             <Link href={t("aboutButton.link")}>
-              <button className='font-medium bg-[#fff] h-10 px-8 py-2 hover:bg-[#e9e9e9]/90 text-sm rounded-md text-black w-full transition-all'>
+              <button className='max-sm:w-full ont-medium bg-[#fff] h-10 px-8 py-2 hover:bg-[#e9e9e9]/90 text-sm rounded-md text-black w-full transition-all'>
                 {t("aboutButton.text")}
               </button>
             </Link>
