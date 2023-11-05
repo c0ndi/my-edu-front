@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1699188811402,
@@ -24,6 +24,14 @@
                 {
                     "date": 1699189110762,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,10 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n-  // A list of all locales that are supported\n   locales: [\"en\", \"pl\", \"ua\", \"de\"],\n-\n-  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)\n-  defaultLocale: \"en\",\n+  defaultLocale: \"pl\",\n });\n \n export const config = {\n-  // Skip all paths that should not be internationalized. This example skips\n-  // certain folders and all pathnames with a dot (e.g. favicon.ico)\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n };\n"
+                },
+                {
+                    "date": 1699221642851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n   locales: [\"en\", \"pl\", \"ua\", \"de\"],\n-  defaultLocale: \"pl\",\n });\n \n export const config = {\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n"
+                },
+                {
+                    "date": 1699221659706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n   locales: [\"en\", \"pl\", \"ua\", \"de\"],\n+  defaultLocale: \"pl\",\n });\n \n export const config = {\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n"
                 }
             ],
             "date": 1699188811402,

@@ -4,8 +4,6 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ui/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
 import { notFound, useSearchParams } from 'next/navigation'
-import { headers } from 'next/headers'
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -28,6 +26,9 @@ export default function RootLayout({
 }) {
   const isValidLocale = locales.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
+
+  console.log(locale);
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>

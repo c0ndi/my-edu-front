@@ -4,5 +4,9 @@ const withNextIntl = require("next-intl/plugin")(
 );
 
 module.exports = withNextIntl({
-  // Other Next.js configuration ...
+  i18n: {
+    locales: ["pl", "en", "ua", "de"],
+    defaultLocale: "pl",
+    localeDetection: false,
+  },
 });
