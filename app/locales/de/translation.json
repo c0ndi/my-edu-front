@@ -2,8 +2,8 @@
   "navbar": {
     "langs": {
       "lang-1": {
-        "locale": "pl",
-        "name": "Polski"
+        "locale": "de",
+        "name": "Deutsch"
       },
       "lang-2": {
         "locale": "en",
@@ -14,8 +14,8 @@
         "name": "Українська"
       },
       "lang-4": {
-        "locale": "de",
-        "name": "Deutsch"
+        "locale": "pl",
+        "name": "Polski"
       }
     },
     "dashboardButton": {
