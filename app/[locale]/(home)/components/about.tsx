@@ -8,7 +8,7 @@ type Props = {}
 export default function About({ }: Props) {
   const t = useTranslations("about")
   return (
-    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id="about">
+    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-3' id="about">
       <div className='w-full flex gap-6 max-lg:flex-col'>
         <div className='w-1/2 max-lg:w-full'>
           <p className='text-[#E54141] font-extrabold'>{t("subheading")}</p>

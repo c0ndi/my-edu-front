@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 20,
+            "activePatchIndex": 21,
             "patches": [
                 {
                     "date": 1699195856237,
@@ -88,6 +88,10 @@
                 {
                     "date": 1699196354914,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <Link href=\"https://examifast.com\">\n+    <Link href=\"https://examifast.com\" target='_blank'>\n       <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n         <Image\n           src={Icon}\n           alt={\"Badge icon.\"}\n"
+                },
+                {
+                    "date": 1699223657725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import React from 'react'\n+import Icon from '@/public/images/home/badge/icon.svg'\n+import Arrow from '@/public/images/home/badge/arrow.svg'\n+import Image from 'next/image'\n+import Link from 'next/link'\n+\n+type Props = {\n+  text: string;\n+}\n+\n+export default function Badge({ text }: Props) {\n+  return (\n+    <Link href=\"https://examifast.com\" target='_blank'>\n+      <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-3 py-1 w-max rounded-md'>\n+        <Image\n+          src={Icon}\n+          alt={\"Badge icon.\"}\n+          width={12}\n+          height={12}\n+        />\n+        <p className='text-xs text-white'>{text}</p>\n+        <Image\n+          src={Arrow}\n+          alt={\"Arrow icon.\"}\n+          width={9}\n+          height={9}\n+        />\n+      </div>\n+    </Link>\n+  )\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1699195856237,

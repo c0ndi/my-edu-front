@@ -11,7 +11,7 @@ type Props = {
 export default function Badge({ text }: Props) {
   return (
     <Link href="https://examifast.com" target='_blank'>
-      <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>
+      <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-3 py-1 w-max rounded-md'>
         <Image
           src={Icon}
           alt={"Badge icon."}

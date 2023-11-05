@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 78,
+            "activePatchIndex": 79,
             "patches": [
                 {
                     "date": 1699190052125,
@@ -320,6 +320,10 @@
                 {
                     "date": 1699198126497,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id=\"about\">\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n-          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-3xl'>{t(\"heading\")}</h2>\n+          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-2xl'>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value={`item-${i + 1}`} key={i}>\n"
+                },
+                {
+                    "date": 1699223636172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n export default function About({ }: Props) {\n   const t = useTranslations(\"about\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id=\"about\">\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-3' id=\"about\">\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-2xl'>{t(\"heading\")}</h2>\n"
                 }
             ],
             "date": 1699190052125,

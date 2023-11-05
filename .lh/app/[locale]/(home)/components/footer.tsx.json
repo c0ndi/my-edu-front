@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 69,
+            "activePatchIndex": 70,
             "patches": [
                 {
                     "date": 1699196543909,
@@ -284,6 +284,10 @@
                 {
                     "date": 1699219770053,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,8 @@\n \n export default function Footer({ }: Props) {\n   const t = useTranslations(\"footer\")\n \n-  console.log(t);\n-\n   return (\n     <footer className='border-t border-[#2A2A2A]'>\n       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <div className='flex gap-3 items-center w-1/3 max-md:w-full'>\n"
+                },
+                {
+                    "date": 1699223643133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   const t = useTranslations(\"footer\")\n \n   return (\n     <footer className='border-t border-[#2A2A2A]'>\n-      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-3 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <div className='flex gap-3 items-center w-1/3 max-md:w-full'>\n           <Image\n             src={Logo}\n             alt={\"Logo.\"}\n"
                 }
             ],
             "date": 1699196543909,

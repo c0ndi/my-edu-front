@@ -31,7 +31,7 @@ export default function Navbar({ }: Props) {
 
   return (
     <nav className='border-b border-[#E4E4E7]'>
-      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>
+      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-3 overflow-hidden text-white'>
         <Logo />
 
         <Popover>

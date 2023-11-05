@@ -11,7 +11,7 @@ export default function Footer({ }: Props) {
 
   return (
     <footer className='border-t border-[#2A2A2A]'>
-      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>
+      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-3 overflow-hidden text-white max-md:flex-col max-md:items-start'>
         <div className='flex gap-3 items-center w-1/3 max-md:w-full'>
           <Image
             src={Logo}
