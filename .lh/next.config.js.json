@@ -1,0 +1,50 @@
+{
+    "sourceFile": "next.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1699185587666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699185595454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n   i18n: {\n     defaultLocale: \"en\",\n-    locales: [\"en\", \"de\"],\n+    locales: [\"en\", \"de\", \"ua\", \"pl\"],\n   },\n };\n \n module.exports = nextConfig;\n"
+                },
+                {
+                    "date": 1699185717108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,5 @@\n-/** @type {import('next').NextConfig} */\n-const nextConfig = {\n-  i18n: {\n-    defaultLocale: \"en\",\n-    locales: [\"en\", \"de\", \"ua\", \"pl\"],\n-  },\n+const { i18n } = require(\"./next-i18next.config\");\n+\n+module.exports = {\n+  i18n,\n };\n-\n-module.exports = nextConfig;\n"
+                },
+                {
+                    "date": 1699185729810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { i18n } = require(\"./next-i18next.config\");\n+import i18n from \"./i18n\";\n \n module.exports = {\n   i18n,\n };\n"
+                },
+                {
+                    "date": 1699185751315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-import i18n from \"./i18n\";\n-\n-module.exports = {\n+/** @type {import('next').NextConfig} */\n+const nextConfig = {\n   i18n,\n };\n+\n+module.exports = nextConfig;\n"
+                },
+                {
+                    "date": 1699185759526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { i18n } from \"./next-i18next.config\";\n+\n /** @type {import('next').NextConfig} */\n const nextConfig = {\n   i18n,\n };\n"
+                },
+                {
+                    "date": 1699188952355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,1 @@\n-import { i18n } from \"./next-i18next.config\";\n \n-/** @type {import('next').NextConfig} */\n-const nextConfig = {\n-  i18n,\n-};\n-\n-module.exports = nextConfig;\n"
+                },
+                {
+                    "date": 1699188960092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n+/** @type {import('next').NextConfig} */\n+const nextConfig = {};\n \n+module.exports = nextConfig;\n"
+                },
+                {
+                    "date": 1699189501418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,8 @@\n-/** @type {import('next').NextConfig} */\n-const nextConfig = {};\n+const withNextIntl = require(\"next-intl/plugin\")(\n+  // This is the default (also the `src` folder is supported out of the box)\n+  \"./i18n.ts\"\n+);\n \n-module.exports = nextConfig;\n+module.exports = withNextIntl({\n+  // Other Next.js configuration ...\n+});\n"
+                }
+            ],
+            "date": 1699185587666,
+            "name": "Commit-0",
+            "content": "/** @type {import('next').NextConfig} */\nconst nextConfig = {\n  i18n: {\n    defaultLocale: \"en\",\n    locales: [\"en\", \"de\"],\n  },\n};\n\nmodule.exports = nextConfig;\n"
+        }
+    ]
+}

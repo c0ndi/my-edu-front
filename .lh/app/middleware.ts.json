@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/middleware.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1699186045892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699186050988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\n \n   if (req.headers.has(\"referer\")) {\n     const refererUrl = new URL(req.headers.get(\"referer\"));\n-    const lngInReferer = languages.find((l) =>\n+    const lngInReferer = languages.find((l: string) =>\n       refererUrl.pathname.startsWith(`/${l}`)\n     );\n     const response = NextResponse.next();\n     if (lngInReferer) response.cookies.set(cookieName, lngInReferer);\n"
+                },
+                {
+                    "date": 1699186214049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { NextResponse } from \"next/server\";\n+import { NextRequest, NextResponse } from \"next/server\";\n import acceptLanguage from \"accept-language\";\n import { fallbackLng, languages, cookieName } from \"./app/i18n/settings\";\n \n acceptLanguage.languages(languages);\n@@ -8,18 +8,21 @@\n   // matcher: '/:lng*'\n   matcher: [\"/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)\"],\n };\n \n-export function middleware(req) {\n+export function middleware(req: NextRequest) {\n   let lng;\n   if (req.cookies.has(cookieName))\n-    lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n+    if (!req.cookies.get(cookieName).value) return;\n+  lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n   if (!lng) lng = acceptLanguage.get(req.headers.get(\"Accept-Language\"));\n   if (!lng) lng = fallbackLng;\n \n   // Redirect if lng in path is not supported\n   if (\n-    !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&\n+    !languages.some((loc: string) =>\n+      req.nextUrl.pathname.startsWith(`/${loc}`)\n+    ) &&\n     !req.nextUrl.pathname.startsWith(\"/_next\")\n   ) {\n     return NextResponse.redirect(\n       new URL(`/${lng}${req.nextUrl.pathname}`, req.url)\n"
+                },
+                {
+                    "date": 1699186266103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { NextRequest, NextResponse } from \"next/server\";\n import acceptLanguage from \"accept-language\";\n-import { fallbackLng, languages, cookieName } from \"./app/i18n/settings\";\n+import { languages, cookieName, fallbackLng } from \"./18n/settings\";\n+// import { fallbackLng, languages, cookieName } from \"./app/i18n/settings\";\n \n acceptLanguage.languages(languages);\n \n export const config = {\n@@ -11,10 +12,9 @@\n \n export function middleware(req: NextRequest) {\n   let lng;\n   if (req.cookies.has(cookieName))\n-    if (!req.cookies.get(cookieName).value) return;\n-  lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n+    lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n   if (!lng) lng = acceptLanguage.get(req.headers.get(\"Accept-Language\"));\n   if (!lng) lng = fallbackLng;\n \n   // Redirect if lng in path is not supported\n"
+                },
+                {
+                    "date": 1699188453818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import { NextRequest, NextResponse } from \"next/server\";\n import acceptLanguage from \"accept-language\";\n import { languages, cookieName, fallbackLng } from \"./18n/settings\";\n-// import { fallbackLng, languages, cookieName } from \"./app/i18n/settings\";\n \n acceptLanguage.languages(languages);\n \n export const config = {\n"
+                },
+                {
+                    "date": 1699188715105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,12 @@\n-import { NextRequest, NextResponse } from \"next/server\";\n-import acceptLanguage from \"accept-language\";\n-import { languages, cookieName, fallbackLng } from \"./18n/settings\";\n+import { i18nRouter } from \"next-i18n-router\";\n+import { i18nConfig } from \"./i18n\";\n+import { NextRequest } from \"next/server\";\n \n-acceptLanguage.languages(languages);\n+export function middleware(request: NextRequest) {\n+  return i18nRouter(request, i18nConfig);\n+}\n \n+// applies this middleware only to files in the app directory\n export const config = {\n-  // matcher: '/:lng*'\n-  matcher: [\"/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)\"],\n+  matcher: \"/((?!api|static|.*..*|_next).*)\",\n };\n-\n-export function middleware(req: NextRequest) {\n-  let lng;\n-  if (req.cookies.has(cookieName))\n-    lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n-  if (!lng) lng = acceptLanguage.get(req.headers.get(\"Accept-Language\"));\n-  if (!lng) lng = fallbackLng;\n-\n-  // Redirect if lng in path is not supported\n-  if (\n-    !languages.some((loc: string) =>\n-      req.nextUrl.pathname.startsWith(`/${loc}`)\n-    ) &&\n-    !req.nextUrl.pathname.startsWith(\"/_next\")\n-  ) {\n-    return NextResponse.redirect(\n-      new URL(`/${lng}${req.nextUrl.pathname}`, req.url)\n-    );\n-  }\n-\n-  if (req.headers.has(\"referer\")) {\n-    const refererUrl = new URL(req.headers.get(\"referer\"));\n-    const lngInReferer = languages.find((l: string) =>\n-      refererUrl.pathname.startsWith(`/${l}`)\n-    );\n-    const response = NextResponse.next();\n-    if (lngInReferer) response.cookies.set(cookieName, lngInReferer);\n-    return response;\n-  }\n-\n-  return NextResponse.next();\n-}\n"
+                }
+            ],
+            "date": 1699186045892,
+            "name": "Commit-0",
+            "content": "import { NextResponse } from \"next/server\";\nimport acceptLanguage from \"accept-language\";\nimport { fallbackLng, languages, cookieName } from \"./app/i18n/settings\";\n\nacceptLanguage.languages(languages);\n\nexport const config = {\n  // matcher: '/:lng*'\n  matcher: [\"/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)\"],\n};\n\nexport function middleware(req) {\n  let lng;\n  if (req.cookies.has(cookieName))\n    lng = acceptLanguage.get(req.cookies.get(cookieName).value);\n  if (!lng) lng = acceptLanguage.get(req.headers.get(\"Accept-Language\"));\n  if (!lng) lng = fallbackLng;\n\n  // Redirect if lng in path is not supported\n  if (\n    !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&\n    !req.nextUrl.pathname.startsWith(\"/_next\")\n  ) {\n    return NextResponse.redirect(\n      new URL(`/${lng}${req.nextUrl.pathname}`, req.url)\n    );\n  }\n\n  if (req.headers.has(\"referer\")) {\n    const refererUrl = new URL(req.headers.get(\"referer\"));\n    const lngInReferer = languages.find((l) =>\n      refererUrl.pathname.startsWith(`/${l}`)\n    );\n    const response = NextResponse.next();\n    if (lngInReferer) response.cookies.set(cookieName, lngInReferer);\n    return response;\n  }\n\n  return NextResponse.next();\n}\n"
+        }
+    ]
+}

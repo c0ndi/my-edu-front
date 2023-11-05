@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/[locale]/settings/layout.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1699200404288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1699200404288,
+            "name": "Commit-0",
+            "content": "import { Metadata } from \"next\"\n\nimport { Separator } from \"@/components/ui/separator\"\nimport { SidebarNav } from \"./components/sidebar-nav\"\n\nexport const metadata: Metadata = {\n  title: \"Forms\",\n  description: \"Advanced form example using react-hook-form and Zod.\",\n}\n\nconst sidebarNavItems = [\n  {\n    title: \"Profile\",\n    href: \"/settings/\",\n  },\n  {\n    title: \"Account\",\n    href: \"/settings/account\",\n  },\n  {\n    title: \"Appearance\",\n    href: \"/settings/appearance\",\n  },\n  {\n    title: \"Notifications\",\n    href: \"/settings/notifications\",\n  },\n  {\n    title: \"Display\",\n    href: \"/settings/display\",\n  },\n]\n\ninterface SettingsLayoutProps {\n  children: React.ReactNode\n}\n\nexport default function SettingsLayout({ children }: SettingsLayoutProps) {\n  return (\n    <div className=\"block space-y-6 pb-16 p-4 md:p-10\">\n      <div className=\"space-y-0.5\">\n        <h2 className=\"text-2xl font-bold tracking-tight\">Settings</h2>\n        <p className=\"text-muted-foreground\">\n          Manage your account settings and set e-mail preferences.\n        </p>\n      </div>\n      <Separator className=\"my-6\" />\n      <div className=\"flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0\">\n        <aside className=\"-mx-4 lg:w-1/5\">\n          <SidebarNav items={sidebarNavItems} />\n        </aside>\n        <div className=\"flex-1 lg:max-w-2xl\">{children}</div>\n      </div>\n    </div>\n  )\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "navbar": {
+    "langs": {
+      "lang-1": {
+        "locale": "pl",
+        "name": "Polski"
+      },
+      "lang-2": {
+        "locale": "ua",
+        "name": "Українська"
+      },
+      "lang-3": {
+        "locale": "en",
+        "name": "English"
+      },
+      "lang-4": {
+        "locale": "de",
+        "name": "Niemiecki"
+      }
+    },
+    "dashboardButton": {
+      "text": "Panel",
+      "link": "/pl/dashboard"
+    }
+  },
+  "hero": {
+    "badge": "Nowy system tworzenia klasówek",
+    "heading": "ZINTEGROWANY SYSTEM ZARZĄDZANIA DLA SZKÓŁ",
+    "description": "Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.",
+    "dashboardButton": {
+      "text": "Idź do panelu",
+      "link": "/pl/dashboard"
+    },
+    "aboutButton": {
+      "text": "Dowiedz się więcej",
+      "link": "/pl/#about"
+    }
+  },
+  "app": {
+    "subheading": "NAJNOWSZE, NAJSZYBSZE, ROZWIĄZANIE DLA SZKÓŁ",
+    "heading": "EXAMIFAST",
+    "description": "Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.",
+    "badge": "Nowy system tworzenia klasówek",
+    "aboutButton": {
+      "text": "Dowiedz się więcej",
+      "link": "https://link-examifast.pl"
+    }
+  },
+  "about": {
+    "subheading": "O NAS",
+    "heading": "DLACZEGO AKURAT MY?",
+    "question-1": {
+      "question": "Jakie są główne zalety Waszego dziennika elektronicznego w porównaniu do innych dostępnych na rynku?",
+      "answer": "Nasz dziennik elektroniczny charakteryzuje się wyjątkową szybkością działania i wydajnością, umożliwiając szybkie zarządzanie codziennymi zadaniami. Oferuje również możliwości dostosowania do specyficznych wymagań każdej szkoły."
+    },
+    "question-2": {
+      "question": "Czy Wasz dziennik oferuje funkcjonalności wspomagające nauczycieli w pracy?",
+      "answer": "Tak, wyposażony jest w narzędzia automatyzujące procesy takie jak tworzenie i sprawdzanie testów, co pozwala nauczycielom skoncentrować się bardziej na pracy z uczniami."
+    },
+    "question-3": {
+      "question": "Czy Wasza platforma jest dostępna na różnych urządzeniach?",
+      "answer": "Nasz system jest zbudowany w oparciu o zasady responsywnego designu, co gwarantuje jego dostępność i pełną funkcjonalność na wszelkiego rodzaju urządzeniach."
+    },
+    "question-4": {
+      "question": "W jaki sposób Wasz dziennik ułatwia komunikację między szkołą a rodzicami?",
+      "answer": "System zawiera wbudowane narzędzia komunikacyjne, które ułatwiają informowanie rodziców o postępach uczniów oraz umożliwiają bieżący kontakt z nauczycielami."
+    },
+    "question-5": {
+      "question": "Czy Wasz dziennik jest bezpieczny i jak dbacie o prywatność danych użytkowników?",
+      "answer": "Stosujemy zaawansowane protokoły szyfrowania i regularne aktualizacje systemów, aby chronić dane osobowe użytkowników, przestrzegając aktualnych przepisów o ochronie danych."
+    }
+  },
+  "footer": {
+    "link-1": {
+      "text": "O nas",
+      "link": "/pl/#about"
+    },
+    "link-2": {
+      "text": "Examifast",
+      "link": "https://link-examifast.pl"
+    },
+    "link-3": {
+      "text": "Regulamin",
+      "link": "/pl/terms-and-conditions"
+    },
+    "link-4": {
+      "text": "Kontakt",
+      "link": "https://link-contact.pl"
+    }
+  }
+}

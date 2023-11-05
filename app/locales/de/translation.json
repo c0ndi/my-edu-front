@@ -1,0 +1,91 @@
+{
+  "navbar": {
+    "langs": {
+      "lang-1": {
+        "locale": "de",
+        "name": "Deutsch"
+      },
+      "lang-2": {
+        "locale": "pl",
+        "name": "Polski"
+      },
+      "lang-3": {
+        "locale": "ua",
+        "name": "Українська"
+      },
+      "lang-4": {
+        "locale": "en",
+        "name": "English"
+      }
+    },
+    "dashboardButton": {
+      "text": "Dashboard",
+      "link": "/de/dashboard"
+    }
+  },
+  "hero": {
+    "badge": "Neues System für die Erstellung von Klassenarbeiten",
+    "heading": "INTEGRIERTES VERWALTUNGSSYSTEM FÜR SCHULEN",
+    "description": "Wir präsentieren ein zukunftsweisendes Bildungsmanagementsystem, das Lehrern das Entwerfen personalisierter Tests und Klassenarbeiten erleichtert und die Verwaltung von Unterricht und Lehrmaterialien ermöglicht.",
+    "dashboardButton": {
+      "text": "Zum Dashboard gehen",
+      "link": "/de/dashboard"
+    },
+    "aboutButton": {
+      "text": "Erfahren Sie mehr",
+      "link": "/de/#about"
+    }
+  },
+  "app": {
+    "subheading": "DIE NEUESTE, SCHNELLSTE LÖSUNG FÜR SCHULEN",
+    "heading": "EXAMIFAST",
+    "description": "Hier ist ein modernes Tool, das den Bewertungsprozess in der Bildung revolutioniert, indem es Lehrern ermöglicht, Tests innerhalb von Sekunden schnell zu überprüfen. Diese Anwendung bietet sofortige Ergebnisanalysen, die ein effektives Tracking des Schülerfortschritts und die Anpassung von Lehrmethoden an individuelle Lernbedürfnisse ermöglichen.",
+    "badge": "Neues System für die Erstellung von Klassenarbeiten",
+    "aboutButton": {
+      "text": "Erfahren Sie mehr",
+      "link": "https://link-examifast.de"
+    }
+  },
+  "about": {
+    "subheading": "ÜBER UNS",
+    "heading": "WARUM GERADE WIR?",
+    "question-1": {
+      "question": "Was sind die Hauptvorteile Ihres elektronischen Klassenbuchs im Vergleich zu anderen auf dem Markt verfügbaren?",
+      "answer": "Unser elektronisches Klassenbuch zeichnet sich durch außergewöhnliche Geschwindigkeit und Effizienz aus, die ein schnelles Management der täglichen Aufgaben ermöglichen. Es bietet auch Anpassungsmöglichkeiten an die spezifischen Anforderungen jeder Schule."
+    },
+    "question-2": {
+      "question": "Bietet Ihr Klassenbuch Funktionen, die Lehrer bei ihrer Arbeit unterstützen?",
+      "answer": "Ja, es ist mit Tools ausgestattet, die Prozesse wie das Erstellen und Überprüfen von Tests automatisieren, was es Lehrern ermöglicht, sich mehr auf die Arbeit mit den Schülern zu konzentrieren."
+    },
+    "question-3": {
+      "question": "Ist Ihre Plattform auf verschiedenen Geräten verfügbar?",
+      "answer": "Unser System ist nach den Prinzipien des responsiven Designs gebaut, was seine Verfügbarkeit und volle Funktionalität auf allen Arten von Geräten gewährleistet."
+    },
+    "question-4": {
+      "question": "Wie erleichtert Ihr Klassenbuch die Kommunikation zwischen Schule und Eltern?",
+      "answer": "Das System enthält eingebaute Kommunikationstools, die es erleichtern, Eltern über die Fortschritte der Schüler zu informieren und den laufenden Kontakt mit Lehrern zu ermöglichen."
+    },
+    "question-5": {
+      "question": "Ist Ihr Klassenbuch sicher und wie schützen Sie die Privatsphäre der Benutzerdaten?",
+      "answer": "Wir verwenden fortschrittliche Verschlüsselungsprotokolle und regelmäßige Systemupdates, um die persönlichen Daten der Nutzer zu schützen, wobei wir die aktuellen Datenschutzvorschriften einhalten."
+    }
+  },
+  "footer": {
+    "link-1": {
+      "text": "Über uns",
+      "link": "/de/#about"
+    },
+    "link-2": {
+      "text": "Examifast",
+      "link": "https://link-examifast.de"
+    },
+    "link-3": {
+      "text": "Verordnungen",
+      "link": "/de/terms-and-conditions"
+    },
+    "link-4": {
+      "text": "Kontakt",
+      "link": "https://link-contact.de"
+    }
+  }
+}

@@ -1,0 +1,314 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/hero.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 74,
+            "patches": [
+                {
+                    "date": 1699189224271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699189266647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,12 @@\n-import { useTranslation } from '@/app/18n'\n+import { useTranslations } from 'next-intl'\n import React from 'react'\n \n type Props = {}\n \n+export function Hero({ }: Props) {\n \n-\n-export function Hero({ }: Props) {\n-  const { t } = useTranslation('home')\n-  console.log(t);\n+  const t = useTranslations(\"hero\")\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                },
+                {
+                    "date": 1699189295772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n \n type Props = {}\n \n export function Hero({ }: Props) {\n+  const t = useTranslations(\"hero\")\n+  console.log(t);\n \n-  const t = useTranslations(\"hero\")\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                },
+                {
+                    "date": 1699189408124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\"use client\"\n+\n import { useTranslations } from 'next-intl'\n import React from 'react'\n \n type Props = {}\n"
+                },
+                {
+                    "date": 1699189690536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-\"use client\"\n-\n import { useTranslations } from 'next-intl'\n import React from 'react'\n \n type Props = {}\n"
+                },
+                {
+                    "date": 1699189741790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n type Props = {}\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n-  console.log(t);\n+  console.log(t(\"title\"));\n \n   return (\n     <section>\n       <div>\n"
+                },
+                {
+                    "date": 1699189778237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n type Props = {}\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n-  console.log(t(\"title\"));\n+  console.log(t(\"heading\"));\n \n   return (\n     <section>\n       <div>\n"
+                },
+                {
+                    "date": 1699189948017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const t = useTranslations(\"hero\")\n   console.log(t(\"heading\"));\n \n   return (\n-    <section>\n+    <section className='w-screen h-screen bg-white'>\n       <div>\n         <h1></h1>\n       </div>\n       <div></div>\n"
+                },
+                {
+                    "date": 1699190002471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const t = useTranslations(\"hero\")\n   console.log(t(\"heading\"));\n \n   return (\n-    <section className='w-screen h-screen bg-white'>\n+    <section className='border'>\n       <div>\n         <h1></h1>\n       </div>\n       <div></div>\n"
+                },
+                {
+                    "date": 1699190008418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const t = useTranslations(\"hero\")\n   console.log(t(\"heading\"));\n \n   return (\n-    <section className='border'>\n+    <section className='border w-full h-[300px]'>\n       <div>\n         <h1></h1>\n       </div>\n       <div></div>\n"
+                },
+                {
+                    "date": 1699190064682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { useTranslations } from 'next-intl'\n+import React from 'react'\n+\n+type Props = {}\n+\n+export function Hero({ }: Props) {\n+  const t = useTranslations(\"hero\")\n+  return (\n+    <section className='border w-full h-[300px]'>\n+      <div>\n+        <h1></h1>\n+      </div>\n+      <div></div>\n+    </section>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190118025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,28 +7,10 @@\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='border w-full h-[300px]'>\n       <div>\n-        <h1></h1>\n+        <h1>{t(\"heading\")}</h1>\n       </div>\n       <div></div>\n     </section>\n   )\n-}\n-import { useTranslations } from 'next-intl'\n-import React from 'react'\n-\n-type Props = {}\n-\n-export function Hero({ }: Props) {\n-  const t = useTranslations(\"hero\")\n-  console.log(t(\"heading\"));\n-\n-  return (\n-    <section className='border w-full h-[300px]'>\n-      <div>\n-        <h1></h1>\n-      </div>\n-      <div></div>\n-    </section>\n-  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190125624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   return (\n     <section className='border w-full h-[300px]'>\n       <div>\n         <h1>{t(\"heading\")}</h1>\n+        <p>{t(\"description\")}</p>\n       </div>\n       <div></div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699190212545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { Button } from '@/components/ui/button'\n import { useTranslations } from 'next-intl'\n import React from 'react'\n \n type Props = {}\n@@ -7,10 +8,23 @@\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='border w-full h-[300px]'>\n       <div>\n+        <button>\n+          {t(\"badge\")}\n+        </button>\n         <h1>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n+        <div>\n+          <Button>\n+            {t(\"button\")}\n+          </Button>\n+          <Link>\n+            <Button>\n+              {t(\"aboutButton.text\")}\n+            </Button>\n+\n+        </div>\n       </div>\n       <div></div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699190228951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { Button } from '@/components/ui/button'\n import { useTranslations } from 'next-intl'\n+import Link from 'next/link'\n import React from 'react'\n \n type Props = {}\n \n@@ -17,13 +18,13 @@\n         <div>\n           <Button>\n             {t(\"button\")}\n           </Button>\n-          <Link>\n+          <Link href={t(\"aboutButton.link\")}>\n             <Button>\n               {t(\"aboutButton.text\")}\n             </Button>\n-\n+          </Link>\n         </div>\n       </div>\n       <div></div>\n     </section>\n"
+                },
+                {
+                    "date": 1699190239003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,16 +15,18 @@\n         </button>\n         <h1>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n-          <Button>\n-            {t(\"button\")}\n-          </Button>\n           <Link href={t(\"aboutButton.link\")}>\n             <Button>\n               {t(\"aboutButton.text\")}\n             </Button>\n           </Link>\n+          <Link href={t(\"aboutButton.link\")}>\n+            <Button>\n+              {t(\"aboutButton.text\")}\n+            </Button>\n+          </Link>\n         </div>\n       </div>\n       <div></div>\n     </section>\n"
+                },
+                {
+                    "date": 1699190245936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         </button>\n         <h1>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n-          <Link href={t(\"aboutButton.link\")}>\n+          <Link href={t(\"dashboardButton.link\")}>\n             <Button>\n               {t(\"aboutButton.text\")}\n             </Button>\n           </Link>\n"
+                },
+                {
+                    "date": 1699190290626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n         <h1>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n-            <Button>\n-              {t(\"aboutButton.text\")}\n+            <Button variant={\"secondary\"}>\n+              {t(\"dashboardButton.text\")}\n             </Button>\n           </Link>\n           <Link href={t(\"aboutButton.link\")}>\n             <Button>\n"
+                },
+                {
+                    "date": 1699190312234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1>{t(\"heading\")}</h1>\n+        <h1 className='text-3xl'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190326906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='text-3xl'>{t(\"heading\")}</h1>\n+        <h1 className='text-5xl font-extrabold'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190365879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='text-5xl font-extrabold'>{t(\"heading\")}</h1>\n+        <h1 className='ont-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190373009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='ont-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190378067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190403248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-[0F172A] to-pink-600'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190412318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-[0F172A] to-pink-600'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-[#0F172A] to-[#646464]'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190419634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-purple-[#0F172A] to-[#646464]'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#0F172A] to-[#646464]'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190426108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#0F172A] to-[#646464]'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r to-[#0F172A] from-[#646464]'>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190438767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r to-[#0F172A] from-[#646464]'>{t(\"heading\")}</h1>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-rfrom-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n         <p>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n"
+                },
+                {
+                    "date": 1699190475496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-rfrom-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p>{t(\"description\")}</p>\n+        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n+        <p className='font-medium text-lg'>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699190513352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <button>\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p className='font-medium text-lg'>{t(\"description\")}</p>\n+        <p className='font-medium text-lg text-accent'>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699190523293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='border w-full h-[300px]'>\n+    <section className='border w-full h-[300px] bg-white'>\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n"
+                },
+                {
+                    "date": 1699190752880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='border w-full h-[300px] bg-white'>\n+    <section className='border w-full h-[300px]'>\n       <div>\n         <button>\n           {t(\"badge\")}\n         </button>\n@@ -30,5 +30,7 @@\n       </div>\n       <div></div>\n     </section>\n   )\n-}\n\\ No newline at end of file\n+}\n+\n+Hero.theme = 'light';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190807953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='border w-full h-[300px]'>\n-      <div>\n+      <div className='w-1/2'>\n         <button>\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n@@ -30,7 +30,5 @@\n       </div>\n       <div></div>\n     </section>\n   )\n-}\n-\n-Hero.theme = 'light';\n\\ No newline at end of file\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190834029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <button>\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p className='font-medium text-lg text-accent'>{t(\"description\")}</p>\n+        <p className='font-medium text-lg text-[#64748B]'>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699190844643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <button>\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p className='font-medium text-lg text-[#64748B]'>{t(\"description\")}</p>\n+        <p className='font-medium text-lg text-[#64748B] py-3'>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699190849707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='border w-full h-[300px]'>\n+    <section className='border w-full'>\n       <div className='w-1/2'>\n         <button>\n           {t(\"badge\")}\n         </button>\n"
+                },
+                {
+                    "date": 1699190876197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <button>\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p className='font-medium text-lg text-[#64748B] py-3'>{t(\"description\")}</p>\n+        <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n         <div>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699191206095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { Button } from '@/components/ui/button'\n import { useTranslations } from 'next-intl'\n import Link from 'next/link'\n import React from 'react'\n+import Preview from '@/public/images/home/hero/preview.png'\n \n type Props = {}\n \n export function Hero({ }: Props) {\n"
+                },
+                {
+                    "date": 1699191221543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { useTranslations } from 'next-intl'\n import Link from 'next/link'\n import React from 'react'\n import Preview from '@/public/images/home/hero/preview.png'\n+import Image from 'next/image'\n \n type Props = {}\n \n export function Hero({ }: Props) {\n@@ -28,8 +29,10 @@\n             </Button>\n           </Link>\n         </div>\n       </div>\n-      <div></div>\n+      <div>\n+        <Image src={Preview} alt={t(\"previewImage.alt\")} />\n+      </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191227809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,12 @@\n           </Link>\n         </div>\n       </div>\n       <div>\n-        <Image src={Preview} alt={t(\"previewImage.alt\")} />\n+        <Image\n+          src={Preview}\n+          alt={t(\"previewImage.alt\")}\n+        />\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191238367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='border w-full'>\n+    <section className='border w-full flex items-center'>\n       <div className='w-1/2'>\n         <button>\n           {t(\"badge\")}\n         </button>\n"
+                },
+                {
+                    "date": 1699191373190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             </Button>\n           </Link>\n         </div>\n       </div>\n-      <div>\n+      <div className='w-1/2'>\n         <Image\n           src={Preview}\n           alt={t(\"previewImage.alt\")}\n         />\n"
+                },
+                {
+                    "date": 1699191379826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             </Button>\n           </Link>\n         </div>\n       </div>\n-      <div className='w-1/2'>\n+      <div className='w-1/2 ml-auto'>\n         <Image\n           src={Preview}\n           alt={t(\"previewImage.alt\")}\n         />\n"
+                },
+                {
+                    "date": 1699191385665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             </Button>\n           </Link>\n         </div>\n       </div>\n-      <div className='w-1/2 ml-auto'>\n+      <div className='w-1/2 translate-x-20'>\n         <Image\n           src={Preview}\n           alt={t(\"previewImage.alt\")}\n         />\n"
+                },
+                {
+                    "date": 1699191408510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n         <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n-        <div>\n+        <div className='space-x-2'>\n           <Link href={t(\"dashboardButton.link\")}>\n             <Button variant={\"secondary\"}>\n               {t(\"dashboardButton.text\")}\n             </Button>\n@@ -29,9 +29,9 @@\n             </Button>\n           </Link>\n         </div>\n       </div>\n-      <div className='w-1/2 translate-x-20'>\n+      <div className='w-1/2 translate-x-16'>\n         <Image\n           src={Preview}\n           alt={t(\"previewImage.alt\")}\n         />\n"
+                },
+                {
+                    "date": 1699191551669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n           {t(\"badge\")}\n         </button>\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n         <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n-        <div className='space-x-2'>\n+        <div className='space-x-3'>\n           <Link href={t(\"dashboardButton.link\")}>\n-            <Button variant={\"secondary\"}>\n+            <Button variant={\"secondary\"} size={\"xl\"}>\n               {t(\"dashboardButton.text\")}\n             </Button>\n           </Link>\n           <Link href={t(\"aboutButton.link\")}>\n"
+                },
+                {
+                    "date": 1699191574192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n         <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n         <div className='space-x-3'>\n           <Link href={t(\"dashboardButton.link\")}>\n-            <Button variant={\"secondary\"} size={\"xl\"}>\n+            <Button variant={\"secondary\"} size={\"lg\"}>\n               {t(\"dashboardButton.text\")}\n             </Button>\n           </Link>\n           <Link href={t(\"aboutButton.link\")}>\n"
+                },
+                {
+                    "date": 1699191580538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             <Button variant={\"secondary\"} size={\"lg\"}>\n               {t(\"dashboardButton.text\")}\n             </Button>\n           </Link>\n-          <Link href={t(\"aboutButton.link\")}>\n+          <Link href={t(\"aboutButton.link\")} size={\"lg\"}>\n             <Button>\n               {t(\"aboutButton.text\")}\n             </Button>\n           </Link>\n"
+                },
+                {
+                    "date": 1699191588449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='border w-full flex items-center'>\n+    <section className='w-full flex items-center'>\n       <div className='w-1/2'>\n         <button>\n           {t(\"badge\")}\n         </button>\n"
+                },
+                {
+                    "date": 1699191724457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n             <Button variant={\"secondary\"} size={\"lg\"}>\n               {t(\"dashboardButton.text\")}\n             </Button>\n           </Link>\n-          <Link href={t(\"aboutButton.link\")} size={\"lg\"}>\n-            <Button>\n+          <Link href={t(\"aboutButton.link\")}>\n+            <Button size={\"lg\"}>\n               {t(\"aboutButton.text\")}\n             </Button>\n           </Link>\n         </div>\n"
+                },
+                {
+                    "date": 1699191813925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n       </div>\n       <div className='w-1/2 translate-x-16'>\n         <Image\n           src={Preview}\n-          alt={t(\"previewImage.alt\")}\n+          alt={\"Login app preview\"}\n         />\n       </div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699191874039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,33 +9,38 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='w-full flex items-center'>\n-      <div className='w-1/2'>\n-        <button>\n-          {t(\"badge\")}\n-        </button>\n-        <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-        <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n-        <div className='space-x-3'>\n-          <Link href={t(\"dashboardButton.link\")}>\n-            <Button variant={\"secondary\"} size={\"lg\"}>\n-              {t(\"dashboardButton.text\")}\n-            </Button>\n-          </Link>\n-          <Link href={t(\"aboutButton.link\")}>\n-            <Button size={\"lg\"}>\n-              {t(\"aboutButton.text\")}\n-            </Button>\n-          </Link>\n+\n+    <div className='max-w-[1280px] flex flex-col mx-auto'>\n+\n+      <section className='w-full flex items-center'>\n+        <div className='w-1/2'>\n+          <button>\n+            {t(\"badge\")}\n+          </button>\n+          <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n+          <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n+          <div className='space-x-3'>\n+            <Link href={t(\"dashboardButton.link\")}>\n+              <Button variant={\"secondary\"} size={\"lg\"}>\n+                {t(\"dashboardButton.text\")}\n+              </Button>\n+            </Link>\n+            <Link href={t(\"aboutButton.link\")}>\n+              <Button size={\"lg\"}>\n+                {t(\"aboutButton.text\")}\n+              </Button>\n+            </Link>\n+          </div>\n         </div>\n-      </div>\n-      <div className='w-1/2 translate-x-16'>\n-        <Image\n-          src={Preview}\n-          alt={\"Login app preview\"}\n-        />\n-      </div>\n-    </section>\n+        <div className='w-1/2 translate-x-16'>\n+          <Image\n+            src={Preview}\n+            alt={\"Login app preview.\"}\n+          />\n+        </div>\n+      </section>\n+    </div>\n+\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191881237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,10 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-\n-    <div className='max-w-[1280px] flex flex-col mx-auto'>\n-\n-      <section className='w-full flex items-center'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto'>\n+      <div className='w-full flex items-center'>\n         <div className='w-1/2'>\n           <button>\n             {t(\"badge\")}\n           </button>\n@@ -38,9 +36,9 @@\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n         </div>\n-      </section>\n-    </div>\n+      </div>\n+    </section>\n \n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194440737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,44 @@\n+import { Button } from '@/components/ui/button'\n+import { useTranslations } from 'next-intl'\n+import Link from 'next/link'\n+import React from 'react'\n+import Preview from '@/public/images/home/hero/preview.png'\n+import Image from 'next/image'\n+\n+type Props = {}\n+\n+export function Hero({ }: Props) {\n+  const t = useTranslations(\"hero\")\n+  return (\n+    <section className='max-w-[1280px] flex flex-col mx-auto'>\n+      <div className='w-full flex items-center'>\n+        <div className='w-1/2'>\n+          <button>\n+            {t(\"badge\")}\n+          </button>\n+          <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n+          <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n+          <div className='space-x-3'>\n+            <Link href={t(\"dashboardButton.link\")}>\n+              <Button variant={\"secondary\"} size={\"lg\"}>\n+                {t(\"dashboardButton.text\")}\n+              </Button>\n+            </Link>\n+            <Link href={t(\"aboutButton.link\")}>\n+              <Button size={\"lg\"}>\n+                {t(\"aboutButton.text\")}\n+              </Button>\n+            </Link>\n+          </div>\n+        </div>\n+        <div className='w-1/2 translate-x-16'>\n+          <Image\n+            src={Preview}\n+            alt={\"Login app preview.\"}\n+          />\n+        </div>\n+      </div>\n+    </section>\n+\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194445932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n       <div className='w-full flex items-center'>\n         <div className='w-1/2'>\n           <button>\n             {t(\"badge\")}\n@@ -40,49 +40,5 @@\n       </div>\n     </section>\n \n   )\n-}\n-import { Button } from '@/components/ui/button'\n-import { useTranslations } from 'next-intl'\n-import Link from 'next/link'\n-import React from 'react'\n-import Preview from '@/public/images/home/hero/preview.png'\n-import Image from 'next/image'\n-\n-type Props = {}\n-\n-export function Hero({ }: Props) {\n-  const t = useTranslations(\"hero\")\n-  return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto'>\n-      <div className='w-full flex items-center'>\n-        <div className='w-1/2'>\n-          <button>\n-            {t(\"badge\")}\n-          </button>\n-          <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n-          <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n-          <div className='space-x-3'>\n-            <Link href={t(\"dashboardButton.link\")}>\n-              <Button variant={\"secondary\"} size={\"lg\"}>\n-                {t(\"dashboardButton.text\")}\n-              </Button>\n-            </Link>\n-            <Link href={t(\"aboutButton.link\")}>\n-              <Button size={\"lg\"}>\n-                {t(\"aboutButton.text\")}\n-              </Button>\n-            </Link>\n-          </div>\n-        </div>\n-        <div className='w-1/2 translate-x-16'>\n-          <Image\n-            src={Preview}\n-            alt={\"Login app preview.\"}\n-          />\n-        </div>\n-      </div>\n-    </section>\n-\n-  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194882793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto px-2'>\n       <div className='w-full flex items-center'>\n         <div className='w-1/2'>\n           <button>\n             {t(\"badge\")}\n"
+                },
+                {
+                    "date": 1699194895926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto px-2'>\n-      <div className='w-full flex items-center'>\n+      <div className='w-full flex items-center max-lg:flex-col'>\n         <div className='w-1/2'>\n           <button>\n             {t(\"badge\")}\n           </button>\n"
+                },
+                {
+                    "date": 1699194912587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto px-2'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n-        <div className='w-1/2'>\n+        <div className='w-1/2 max-lg:w-full'>\n           <button>\n             {t(\"badge\")}\n           </button>\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n"
+                },
+                {
+                    "date": 1699194918035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n               </Button>\n             </Link>\n           </div>\n         </div>\n-        <div className='w-1/2 translate-x-16'>\n+        <div className='w-1/2 translate-x-16 max-lg:w-full'>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n"
+                },
+                {
+                    "date": 1699194945810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,12 @@\n           <button>\n             {t(\"badge\")}\n           </button>\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n+          <Image\n+            src={Preview}\n+            alt={\"Login app preview.\"}\n+          />\n           <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n           <div className='space-x-3'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n@@ -30,9 +34,9 @@\n               </Button>\n             </Link>\n           </div>\n         </div>\n-        <div className='w-1/2 translate-x-16 max-lg:w-full'>\n+        <div className='w-1/2 translate-x-16 max-lg:hidden'>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n"
+                },
+                {
+                    "date": 1699194955499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n+            className='hidden max-lg:block'\n           />\n           <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n           <div className='space-x-3'>\n             <Link href={t(\"dashboardButton.link\")}>\n"
+                },
+                {
+                    "date": 1699194985167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto px-2'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <button>\n             {t(\"badge\")}\n"
+                },
+                {
+                    "date": 1699194993570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n export function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto px-2 overflow-hidden'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <button>\n             {t(\"badge\")}\n"
+                },
+                {
+                    "date": 1699195018631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <div className='w-1/2 max-lg:w-full'>\n           <button>\n             {t(\"badge\")}\n           </button>\n-          <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h1>\n+          <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] max-lg:text-3xl '>{t(\"heading\")}</h1>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n"
+                },
+                {
+                    "date": 1699195040851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             src={Preview}\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n           />\n-          <p className='font-medium text-lg text-[#64748B] py-4'>{t(\"description\")}</p>\n+          <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='space-x-3'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n                 {t(\"dashboardButton.text\")}\n"
+                },
+                {
+                    "date": 1699195047079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n           <button>\n             {t(\"badge\")}\n           </button>\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] max-lg:text-3xl '>{t(\"heading\")}</h1>\n-          <Image\n+          {/* <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n-          />\n+          /> */}\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='space-x-3'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n@@ -35,9 +35,9 @@\n               </Button>\n             </Link>\n           </div>\n         </div>\n-        <div className='w-1/2 translate-x-16 max-lg:hidden'>\n+        <div className='w-1/2 translate-x-16'>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n"
+                },
+                {
+                    "date": 1699195054576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n               </Button>\n             </Link>\n           </div>\n         </div>\n-        <div className='w-1/2 translate-x-16'>\n+        <div className='w-1/2 translate-x-16 max-lg:w-full'>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n"
+                },
+                {
+                    "date": 1699195062622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n               </Button>\n             </Link>\n           </div>\n         </div>\n-        <div className='w-1/2 translate-x-16 max-lg:w-full'>\n+        <div className='w-1/2 translate-x-16 max-lg:w-full max-lg:translate-x-0'>\n           <Image\n             src={Preview}\n             alt={\"Login app preview.\"}\n           />\n"
+                },
+                {
+                    "date": 1699195081708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n           /> */}\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n-          <div className='space-x-3'>\n+          <div className='flex'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n                 {t(\"dashboardButton.text\")}\n               </Button>\n"
+                },
+                {
+                    "date": 1699195099467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n           /> */}\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n-          <div className='flex'>\n+          <div className='flex gap-3 max-sx:flex-col'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n                 {t(\"dashboardButton.text\")}\n               </Button>\n"
+                },
+                {
+                    "date": 1699195105790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             alt={\"Login app preview.\"}\n             className='hidden max-lg:block'\n           /> */}\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n-          <div className='flex gap-3 max-sx:flex-col'>\n+          <div className='flex gap-3 max-sm:flex-col'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"}>\n                 {t(\"dashboardButton.text\")}\n               </Button>\n"
+                },
+                {
+                    "date": 1699195117095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,14 +24,14 @@\n           /> */}\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='flex gap-3 max-sm:flex-col'>\n             <Link href={t(\"dashboardButton.link\")}>\n-              <Button variant={\"secondary\"} size={\"lg\"}>\n+              <Button variant={\"secondary\"} size={\"lg\"} className='max-sm:w-full'>\n                 {t(\"dashboardButton.text\")}\n               </Button>\n             </Link>\n             <Link href={t(\"aboutButton.link\")}>\n-              <Button size={\"lg\"}>\n+              <Button size={\"lg\"} className='max-sm:w-full'>\n                 {t(\"aboutButton.text\")}\n               </Button>\n             </Link>\n           </div>\n"
+                },
+                {
+                    "date": 1699195361041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,9 @@\n           <button>\n             {t(\"badge\")}\n           </button>\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] max-lg:text-3xl '>{t(\"heading\")}</h1>\n-          {/* <Image\n-            src={Preview}\n-            alt={\"Login app preview.\"}\n-            className='hidden max-lg:block'\n-          /> */}\n+\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='flex gap-3 max-sm:flex-col'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"} className='max-sm:w-full'>\n"
+                },
+                {
+                    "date": 1699196239572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Link from 'next/link'\n import React from 'react'\n import Preview from '@/public/images/home/hero/preview.png'\n import Image from 'next/image'\n+import Badge from './badge'\n \n type Props = {}\n \n export function Hero({ }: Props) {\n@@ -15,10 +16,10 @@\n         <div className='w-1/2 max-lg:w-full'>\n           <button>\n             {t(\"badge\")}\n           </button>\n+          <Badge text={t(\"badge\")} />\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] max-lg:text-3xl '>{t(\"heading\")}</h1>\n-\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='flex gap-3 max-sm:flex-col'>\n             <Link href={t(\"dashboardButton.link\")}>\n               <Button variant={\"secondary\"} size={\"lg\"} className='max-sm:w-full'>\n"
+                },
+                {
+                    "date": 1699198192995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,14 @@\n import Badge from './badge'\n \n type Props = {}\n \n-export function Hero({ }: Props) {\n+export default function Hero({ }: Props) {\n   const t = useTranslations(\"hero\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n-          <button>\n-            {t(\"badge\")}\n-          </button>\n           <Badge text={t(\"badge\")} />\n           <h1 className='font-extrabold text-transparent text-5xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] max-lg:text-3xl '>{t(\"heading\")}</h1>\n           <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n           <div className='flex gap-3 max-sm:flex-col'>\n"
+                }
+            ],
+            "date": 1699189224271,
+            "name": "Commit-0",
+            "content": "import { useTranslation } from '@/app/18n'\nimport React from 'react'\n\ntype Props = {}\n\n\n\nexport function Hero({ }: Props) {\n  const { t } = useTranslation('home')\n  console.log(t);\n  return (\n    <section>\n      <div>\n        <h1></h1>\n      </div>\n      <div></div>\n    </section>\n  )\n}"
+        }
+    ]
+}

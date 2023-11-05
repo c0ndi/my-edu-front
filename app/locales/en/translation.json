@@ -1,0 +1,92 @@
+{
+  "navbar": {
+    "langs": {
+      "lang-1": {
+        "locale": "en",
+        "name": "English"
+      },
+      "lang-2": {
+        "locale": "pl",
+        "name": "Polski"
+      },
+      "lang-3": {
+        "locale": "ua",
+        "name": "Українська"
+      },
+
+      "lang-4": {
+        "locale": "de",
+        "name": "Deutsch"
+      }
+    },
+    "dashboardButton": {
+      "text": "Dashboard",
+      "link": "/en/dashboard"
+    }
+  },
+  "hero": {
+    "badge": "New Quiz Creation System",
+    "heading": "INTEGRATED MANAGEMENT SYSTEM FOR SCHOOLS",
+    "description": "We introduce a forward-thinking education management system that facilitates teachers in designing personalized quizzes and tests, as well as managing lessons and educational materials.",
+    "dashboardButton": {
+      "text": "Go to Dashboard",
+      "link": "/en/dashboard"
+    },
+    "aboutButton": {
+      "text": "Learn More",
+      "link": "/en/#about"
+    }
+  },
+  "app": {
+    "subheading": "THE LATEST, FASTEST, SOLUTION FOR SCHOOLS",
+    "heading": "EXAMIFAST",
+    "description": "Here is a modern tool that revolutionizes the assessment process in education, enabling teachers to quickly check tests within seconds. The application provides instant analysis of results, allowing for efficient tracking of student progress and tailoring teaching methods to individual learning needs.",
+    "badge": "New Quiz Creation System",
+    "aboutButton": {
+      "text": "Learn More",
+      "link": "https://link-examifast.com"
+    }
+  },
+  "about": {
+    "subheading": "ABOUT US",
+    "heading": "WHY CHOOSE US?",
+    "question-1": {
+      "question": "What are the main advantages of your electronic journal compared to others available on the market?",
+      "answer": "Our electronic journal is characterized by exceptional speed and efficiency, enabling quick management of daily tasks. It also offers customization options to meet the specific requirements of each school."
+    },
+    "question-2": {
+      "question": "Does your journal offer functionalities that support teachers in their work?",
+      "answer": "Yes, it is equipped with tools that automate processes such as creating and checking tests, allowing teachers to focus more on working with students."
+    },
+    "question-3": {
+      "question": "Is your platform available on different devices?",
+      "answer": "Our system is built on the principles of responsive design, ensuring its availability and full functionality on all types of devices."
+    },
+    "question-4": {
+      "question": "How does your journal facilitate communication between the school and parents?",
+      "answer": "The system includes built-in communication tools that facilitate informing parents about student progress and enable ongoing contact with teachers."
+    },
+    "question-5": {
+      "question": "Is your journal secure and how do you care for the privacy of user data?",
+      "answer": "We use advanced encryption protocols and regular system updates to protect users' personal data, complying with current data protection regulations."
+    }
+  },
+  "footer": {
+    "link-1": {
+      "text": "About",
+      "link": "/en/#about"
+    },
+    "link-2": {
+      "text": "Examifast",
+      "link": "https://link-examifast.en"
+    },
+    "link-3": {
+      "text": "Terms and Conditions",
+      "link": "/en/terms-and-conditions"
+    },
+    "link-4": {
+      "text": "Contact",
+      "link": "https://link-contact.en"
+    }
+  }
+}

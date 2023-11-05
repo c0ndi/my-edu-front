@@ -1,0 +1,130 @@
+{
+    "sourceFile": "app/[locale]/(home)/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1699189342794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699189960161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,7 @@\n export default function Home() {\n   return (\n     <div>\n       <Hero />\n-      <p>123</p>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1699189967468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <div>\n+    <main>\n+\n       <Hero />\n-    </div>\n+    </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699189979558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main>\n-\n+    <main className='max-w-3xl'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699189988779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-3xl'>\n+    <main className='max-w-[1280px]'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699189995500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px]'>\n+    <main className='max-w-[1280px] flex flex-col'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190014718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col'>\n+    <main className='max-w-[1280px] flex flex-col justify-center'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190020202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col justify-center'>\n+    <main className='max-w-[1280px] flex flex-col justify-center items-center w-full'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190025583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col justify-center items-center w-full'>\n+    <main className='max-w-[1280px] flex flex-col justify-center items-center mx-auto'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190032059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col justify-center items-center mx-auto'>\n+    <main className='max-w-[1280px] flex flex-col mx-auto'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190537357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col mx-auto'>\n+    <main className='max-w-[1280px] flex flex-col text-white mx-auto'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190544943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col text-white mx-auto'>\n+    <main className='max-w-[1280px] flex flex-col mx-auto'>\n       <Hero />\n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1699190648604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,6 @@\n       <Hero />\n     </main>\n   )\n }\n+\n+Home.theme = 'light';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190764158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,5 @@\n     <main className='max-w-[1280px] flex flex-col mx-auto'>\n       <Hero />\n     </main>\n   )\n-}\n-\n-Home.theme = 'light';\n\\ No newline at end of file\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190777967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,11 @@\n \n export default function Home() {\n   return (\n     <main className='max-w-[1280px] flex flex-col mx-auto'>\n-      <Hero />\n+      <div>\n+\n+        <Hero />\n+      </div>\n     </main>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699190786818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,10 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='max-w-[1280px] flex flex-col mx-auto'>\n-      <div>\n-\n+    <main>\n+      <div className='max-w-[1280px] flex flex-col mx-auto'>\n         <Hero />\n       </div>\n     </main>\n   )\n"
+                },
+                {
+                    "date": 1699191447681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main>\n+    <main className='bg-[#fafafa]'>\n       <div className='max-w-[1280px] flex flex-col mx-auto'>\n         <Hero />\n       </div>\n     </main>\n"
+                },
+                {
+                    "date": 1699191862487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \n export default function Home() {\n   return (\n     <main className='bg-[#fafafa]'>\n-      <div className='max-w-[1280px] flex flex-col mx-auto'>\n-        <Hero />\n-      </div>\n-    </main>\n+      <Hero />\n+    </div>\n+    </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191883715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,7 @@\n export default function Home() {\n   return (\n     <main className='bg-[#fafafa]'>\n       <Hero />\n-    </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191890689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,12 @@\n import { Hero } from './components/hero'\n \n export default function Home() {\n   return (\n-    <main className='bg-[#fafafa]'>\n-      <Hero />\n+    <main>\n+      <div>\n+\n+        <Hero />\n+      </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191897227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,9 @@\n \n export default function Home() {\n   return (\n     <main>\n-      <div>\n-\n+      <div className='bg-white'>\n         <Hero />\n       </div>\n     </main >\n   )\n"
+                },
+                {
+                    "date": 1699191907475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,10 @@\n     <main>\n       <div className='bg-white'>\n         <Hero />\n       </div>\n+      <div className='bg-[#131313]'>\n+\n+      </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191916103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import Image from 'next/image'\n import { Hero } from './components/hero'\n+import About from './components/about'\n \n export default function Home() {\n   return (\n     <main>\n       <div className='bg-white'>\n         <Hero />\n       </div>\n       <div className='bg-[#131313]'>\n-\n+        <About />\n       </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195349356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import Image from 'next/image'\n import { Hero } from './components/hero'\n import About from './components/about'\n+import App from './components/app'\n \n export default function Home() {\n   return (\n     <main>\n@@ -9,8 +10,9 @@\n         <Hero />\n       </div>\n       <div className='bg-[#131313]'>\n         <About />\n+        <App />\n       </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196710157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import Image from 'next/image'\n import { Hero } from './components/hero'\n import About from './components/about'\n import App from './components/app'\n+import Footer from './components/footer'\n \n export default function Home() {\n   return (\n     <main>\n@@ -11,8 +12,9 @@\n       </div>\n       <div className='bg-[#131313]'>\n         <About />\n         <App />\n+        <Footer />\n       </div>\n     </main >\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699197847752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,16 @@\n import { Hero } from './components/hero'\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n+import Navbar from './components/navbar'\n \n export default function Home() {\n   return (\n     <main>\n+      <div>\n+        <Navbar />\n+      </div>\n       <div className='bg-white'>\n         <Hero />\n       </div>\n       <div className='bg-[#131313]'>\n"
+                },
+                {
+                    "date": 1699197878654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n \n export default function Home() {\n   return (\n     <main>\n-      <div>\n+      <div className='bg-[#fff]'>\n         <Navbar />\n       </div>\n-      <div className='bg-white'>\n+      <div className='bg-[#fcfcfc]'>\n         <Hero />\n       </div>\n       <div className='bg-[#131313]'>\n         <About />\n"
+                },
+                {
+                    "date": 1699198195961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import Image from 'next/image'\n-import { Hero } from './components/hero'\n+import Hero from './components/hero'\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n import Navbar from './components/navbar'\n"
+                },
+                {
+                    "date": 1699200383952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import Image from 'next/image'\n import Hero from './components/hero'\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n"
+                }
+            ],
+            "date": 1699189342794,
+            "name": "Commit-0",
+            "content": "import Image from 'next/image'\nimport { Hero } from './components/hero'\n\nexport default function Home() {\n  return (\n    <div>\n      <Hero />\n      <p>123</p>\n    </div>\n  )\n}\n"
+        }
+    ]
+}

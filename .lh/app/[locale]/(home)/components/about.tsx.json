@@ -1,0 +1,330 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/about.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 78,
+            "patches": [
+                {
+                    "date": 1699190052125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699191933739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,9 @@\n type Props = {}\n \n export default function About({ }: Props) {\n   return (\n-    <div>About</div>\n+    <section className='max-w-[1280px] flex flex-col mx-auto'>\n+      131313\n+    </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699191940015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n \n export default function About({ }: Props) {\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n-      131313\n+      <p></p>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699192002049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n \n export default function About({ }: Props) {\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n-      <p></p>\n+      <div className='w-full flex'>\n+\n+      </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699192024832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,13 @@\n \n type Props = {}\n \n export default function About({ }: Props) {\n+  const t = useTranslations(\"about\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n+        <h2></h2>\n \n       </div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699192040672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\n+import { useTranslations } from 'next-intl'\n \n type Props = {}\n \n export default function About({ }: Props) {\n"
+                },
+                {
+                    "date": 1699192065759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n   const t = useTranslations(\"about\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n-        <h2></h2>\n+        <p>{t(\"subheading\")}</p>\n+        <h2>{t(\"heading\")}</h2>\n \n       </div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699192127621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,16 @@\n       <div className='w-full flex'>\n         <p>{t(\"subheading\")}</p>\n         <h2>{t(\"heading\")}</h2>\n \n+        <Accordion type=\"single\" collapsible>\n+          <AccordionItem value=\"item-1\">\n+            <AccordionTrigger>Is it accessible?</AccordionTrigger>\n+            <AccordionContent>\n+              Yes. It adheres to the WAI-ARIA design pattern.\n+            </AccordionContent>\n+          </AccordionItem>\n+        </Accordion>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699192233148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n \n type Props = {}\n \n export default function About({ }: Props) {\n"
+                },
+                {
+                    "date": 1699192286845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,19 @@\n type Props = {}\n \n export default function About({ }: Props) {\n   const t = useTranslations(\"about\")\n+\n+  console.log(t(\"questions\", { returnObjects: true }));\n+\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <p>{t(\"subheading\")}</p>\n         <h2>{t(\"heading\")}</h2>\n \n         <Accordion type=\"single\" collapsible>\n+          {/* {t(\"questions\", { returnObjects: true }))} */}\n           <AccordionItem value=\"item-1\">\n             <AccordionTrigger>Is it accessible?</AccordionTrigger>\n             <AccordionContent>\n               Yes. It adheres to the WAI-ARIA design pattern.\n"
+                },
+                {
+                    "date": 1699192301881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n export default function About({ }: Props) {\n   const t = useTranslations(\"about\")\n \n-  console.log(t(\"questions\", { returnObjects: true }));\n+  console.log(t(\"questions\"));\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n"
+                },
+                {
+                    "date": 1699193220761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n         <p>{t(\"subheading\")}</p>\n         <h2>{t(\"heading\")}</h2>\n \n         <Accordion type=\"single\" collapsible>\n-          {/* {t(\"questions\", { returnObjects: true }))} */}\n           <AccordionItem value=\"item-1\">\n             <AccordionTrigger>Is it accessible?</AccordionTrigger>\n             <AccordionContent>\n               Yes. It adheres to the WAI-ARIA design pattern.\n"
+                },
+                {
+                    "date": 1699193289244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,17 @@\n         <p>{t(\"subheading\")}</p>\n         <h2>{t(\"heading\")}</h2>\n \n         <Accordion type=\"single\" collapsible>\n-          <AccordionItem value=\"item-1\">\n-            <AccordionTrigger>Is it accessible?</AccordionTrigger>\n-            <AccordionContent>\n-              Yes. It adheres to the WAI-ARIA design pattern.\n-            </AccordionContent>\n-          </AccordionItem>\n+          {new Array(5).fill(0).map((_, i) => (\n+\n+            <AccordionItem value=\"item-1\">\n+              <AccordionTrigger>Is it accessible?</AccordionTrigger>\n+              <AccordionContent>\n+                Yes. It adheres to the WAI-ARIA design pattern.\n+              </AccordionContent>\n+            </AccordionItem>\n+          ))}\n         </Accordion>\n       </div>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699193294275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,9 @@\n         <h2>{t(\"heading\")}</h2>\n \n         <Accordion type=\"single\" collapsible>\n           {new Array(5).fill(0).map((_, i) => (\n-\n-            <AccordionItem value=\"item-1\">\n+            <AccordionItem value=\"item-1\" key={i}>\n               <AccordionTrigger>Is it accessible?</AccordionTrigger>\n               <AccordionContent>\n                 Yes. It adheres to the WAI-ARIA design pattern.\n               </AccordionContent>\n"
+                },
+                {
+                    "date": 1699193325799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \n         <Accordion type=\"single\" collapsible>\n           {new Array(5).fill(0).map((_, i) => (\n             <AccordionItem value=\"item-1\" key={i}>\n-              <AccordionTrigger>Is it accessible?</AccordionTrigger>\n+              <AccordionTrigger>{t(`questions.question-${i + 1}`)}</AccordionTrigger>\n               <AccordionContent>\n                 Yes. It adheres to the WAI-ARIA design pattern.\n               </AccordionContent>\n             </AccordionItem>\n"
+                },
+                {
+                    "date": 1699193337609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n \n         <Accordion type=\"single\" collapsible>\n           {new Array(5).fill(0).map((_, i) => (\n             <AccordionItem value=\"item-1\" key={i}>\n-              <AccordionTrigger>{t(`questions.question-${i + 1}`)}</AccordionTrigger>\n+              <AccordionTrigger>{t(`questions.question-${i + 1}.question`)}</AccordionTrigger>\n               <AccordionContent>\n-                Yes. It adheres to the WAI-ARIA design pattern.\n+                {t(`questions.question-${i + 1}.question`)\n               </AccordionContent>\n             </AccordionItem>\n           ))}\n         </Accordion>\n"
+                },
+                {
+                    "date": 1699193343889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           {new Array(5).fill(0).map((_, i) => (\n             <AccordionItem value=\"item-1\" key={i}>\n               <AccordionTrigger>{t(`questions.question-${i + 1}.question`)}</AccordionTrigger>\n               <AccordionContent>\n-                {t(`questions.question-${i + 1}.question`)\n+                {t(`questions.question-${i + 1}.answer`)}\n               </AccordionContent>\n             </AccordionItem>\n           ))}\n         </Accordion>\n"
+                },
+                {
+                    "date": 1699193391275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n \n         <Accordion type=\"single\" collapsible>\n           {new Array(5).fill(0).map((_, i) => (\n             <AccordionItem value=\"item-1\" key={i}>\n-              <AccordionTrigger>{t(`questions.question-${i + 1}.question`)}</AccordionTrigger>\n+              <AccordionTrigger>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n               <AccordionContent>\n-                {t(`questions.question-${i + 1}.answer`)}\n+                {t(`question-${i + 1}.answer`)}\n               </AccordionContent>\n             </AccordionItem>\n           ))}\n         </Accordion>\n"
+                },
+                {
+                    "date": 1699193697575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,21 +11,24 @@\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n-        <p>{t(\"subheading\")}</p>\n-        <h2>{t(\"heading\")}</h2>\n+        <div>\n \n-        <Accordion type=\"single\" collapsible>\n-          {new Array(5).fill(0).map((_, i) => (\n-            <AccordionItem value=\"item-1\" key={i}>\n-              <AccordionTrigger>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n-              <AccordionContent>\n-                {t(`question-${i + 1}.answer`)}\n-              </AccordionContent>\n-            </AccordionItem>\n-          ))}\n-        </Accordion>\n+          <p>{t(\"subheading\")}</p>\n+          <h2>{t(\"heading\")}</h2>\n+\n+          <Accordion type=\"single\" collapsible>\n+            {new Array(5).fill(0).map((_, i) => (\n+              <AccordionItem value=\"item-1\" key={i}>\n+                <AccordionTrigger>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n+                <AccordionContent>\n+                  {t(`question-${i + 1}.answer`)}\n+                </AccordionContent>\n+              </AccordionItem>\n+            ))}\n+          </Accordion>\n+        </div>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699193703080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,9 @@\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n-        <div>\n-\n+        <div className='w-/12'>\n           <p>{t(\"subheading\")}</p>\n           <h2>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n"
+                },
+                {
+                    "date": 1699193712068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,16 @@\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n-        <div className='w-/12'>\n+        <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n           <h2>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n-                <AccordionTrigger>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n+                <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n                 <AccordionContent>\n                   {t(`question-${i + 1}.answer`)}\n                 </AccordionContent>\n               </AccordionItem>\n"
+                },
+                {
+                    "date": 1699193719453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n-          <h2>{t(\"heading\")}</h2>\n+          <h2 className='text-4xl'>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n"
+                },
+                {
+                    "date": 1699193725892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n-          <h2 className='text-4xl'>{t(\"heading\")}</h2>\n+          <h2 className='text-4xl font-extrabold'>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n"
+                },
+                {
+                    "date": 1699193759759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n-          <h2 className='text-4xl font-extrabold'>{t(\"heading\")}</h2>\n+          <h2 className='text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n"
+                },
+                {
+                    "date": 1699193779354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n-          <h2 className='text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#646464] to-[#0F172A] '>{t(\"heading\")}</h2>\n+          <h2 className='text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n"
+                },
+                {
+                    "date": 1699193787727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p>{t(\"subheading\")}</p>\n-          <h2 className='text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n+          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n"
+                },
+                {
+                    "date": 1699193805584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n-          <p>{t(\"subheading\")}</p>\n+          <p className='text-primary'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699193812544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n-          <p className='text-primary'>{t(\"subheading\")}</p>\n+          <p className='text-accent'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699193906336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n-          <p className='text-accent'>{t(\"subheading\")}</p>\n+          <p className='text-textColor'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699193956473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n-          <p className='text-textColor'>{t(\"subheading\")}</p>\n+          <p className='text-[#E54141]'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699193968053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n-          <p className='text-[#E54141]'>{t(\"subheading\")}</p>\n+          <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible>\n             {new Array(5).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699194007125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-12'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n"
+                },
+                {
+                    "date": 1699194107856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n \n type Props = {}\n \n export default function About({ }: Props) {\n@@ -9,9 +10,9 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-12'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-2'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n"
+                },
+                {
+                    "date": 1699194169996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,13 @@\n               </AccordionItem>\n             ))}\n           </Accordion>\n         </div>\n+\n+        <div className='w-1/2'>\n+\n+        </div>\n       </div>\n+\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194175783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n+import Chart from './chart'\n \n type Props = {}\n \n export default function About({ }: Props) {\n@@ -29,9 +30,9 @@\n           </Accordion>\n         </div>\n \n         <div className='w-1/2'>\n-\n+          <Chart />\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194452438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-2'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n"
+                },
+                {
+                    "date": 1699194458212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   console.log(t(\"questions\"));\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n-      <div className='w-full flex'>\n+      <div className='w-full flex items-center'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n"
+                },
+                {
+                    "date": 1699194466689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   console.log(t(\"questions\"));\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n-      <div className='w-full flex items-center'>\n+      <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2'>\n+        <div className='w-1/2 mt-auto'>\n           <Chart />\n         </div>\n       </div>\n \n"
+                },
+                {
+                    "date": 1699194482565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-          <Accordion type=\"single\" collapsible>\n+          <Accordion type=\"single\" collapsible className='mt-7'>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n                 <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n                 <AccordionContent>\n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto'>\n+        <div className='w-1/2 mt-auto border'>\n           <Chart />\n         </div>\n       </div>\n \n"
+                },
+                {
+                    "date": 1699194489830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,15 +11,15 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-24'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-12'>\n       <div className='w-full flex'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-          <Accordion type=\"single\" collapsible className='mt-7'>\n+          <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value=\"item-1\" key={i}>\n                 <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n                 <AccordionContent>\n"
+                },
+                {
+                    "date": 1699194498417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-12'>\n-      <div className='w-full flex'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-16'>\n+      <div className='w-full flex gap-6'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n"
+                },
+                {
+                    "date": 1699194503738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto border'>\n+        <div className='w-1/2 mt-auto'>\n           <Chart />\n         </div>\n       </div>\n \n"
+                },
+                {
+                    "date": 1699194524206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto'>\n           <Chart />\n+          <p>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194537324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto'>\n           <Chart />\n-          <p>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888]'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194543592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto'>\n           <Chart />\n-          <p className='text-[#888888]'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-sm font-italic'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194551869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto'>\n           <Chart />\n-          <p className='text-[#888888] text-sm font-italic'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-sm italic'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194560539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto'>\n           <Chart />\n-          <p className='text-[#888888] text-sm italic'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs text-center'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194566720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,11 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto'>\n+        <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs text-center'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs text-center absolute'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194572060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs text-center absolute'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194577128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,14 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n+          <div>\n+\n+            <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n+\n+          </div>\n         </div>\n-      </div>\n \n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194582932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,12 @@\n           <Chart />\n           <div>\n \n             <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n+          </div>\n \n-          </div>\n         </div>\n+      </div>\n \n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194602785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,13 +31,11 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <div>\n-\n+          <div className='text-center'>\n             <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n           </div>\n-\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194608647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <div className='text-center'>\n-            <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n-          </div>\n+          <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194623090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs text-center absolute mx-auto'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs absolute left-1/2 right-1/2'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194628301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs absolute left-1/2 right-1/2'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs absolute '>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194637463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs absolute '>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs absolute left-full'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194783900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n-              <AccordionItem value=\"item-1\" key={i}>\n+              <AccordionItem value={`item-${i + i}`} key={i}>\n                 <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n                 <AccordionContent>\n                   {t(`question-${i + 1}.answer`)}\n                 </AccordionContent>\n@@ -31,9 +31,9 @@\n         </div>\n \n         <div className='w-1/2 mt-auto relative'>\n           <Chart />\n-          <p className='text-[#888888] text-xs absolute left-full'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n"
+                },
+                {
+                    "date": 1699194866641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n-              <AccordionItem value={`item-${i + i}`} key={i}>\n+              <AccordionItem value={`item-${i + 1}`} key={i}>\n                 <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n                 <AccordionContent>\n                   {t(`question-${i + 1}.answer`)}\n                 </AccordionContent>\n"
+                },
+                {
+                    "date": 1699194876807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n   console.log(t(\"questions\"));\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-16'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n       <div className='w-full flex gap-6'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n"
+                },
+                {
+                    "date": 1699195137588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   console.log(t(\"questions\"));\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n-      <div className='w-full flex gap-6'>\n+      <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n"
+                },
+                {
+                    "date": 1699195143623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n-        <div className='w-1/2'>\n+        <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n"
+                },
+                {
+                    "date": 1699195159461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full border'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195165202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full border'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195180974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full -translate-x-3'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195190709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full -translate-x-3'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195216780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:-translate-5'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195229393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:-translate-5'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.-5]'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195234687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.-5]'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10]'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195245850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10]'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-sm:-translate-2'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195250935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-sm:-translate-2'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-sm:-translate-x-2'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195291493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-sm:-translate-x-2'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-xs:-translate-x-3'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195300617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-sm:scale-[1.10] max-xs:-translate-x-3'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-xs:scale-[1.10] max-xs:-translate-x-3'>\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n         </div>\n       </div>\n"
+                },
+                {
+                    "date": 1699195309368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,41 @@\n+import React from 'react'\n+import { useTranslations } from 'next-intl'\n+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n+import Chart from './chart'\n+\n+type Props = {}\n+\n+export default function About({ }: Props) {\n+  const t = useTranslations(\"about\")\n+\n+  console.log(t(\"questions\"));\n+\n+  return (\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n+      <div className='w-full flex gap-6 max-lg:flex-col'>\n+        <div className='w-1/2 max-lg:w-full'>\n+          <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n+          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n+\n+          <Accordion type=\"single\" collapsible className='mt-12'>\n+            {new Array(5).fill(0).map((_, i) => (\n+              <AccordionItem value={`item-${i + 1}`} key={i}>\n+                <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n+                <AccordionContent>\n+                  {t(`question-${i + 1}.answer`)}\n+                </AccordionContent>\n+              </AccordionItem>\n+            ))}\n+          </Accordion>\n+        </div>\n+\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-xs:scale-[1.10] max-xs:-translate-x-2'>\n+          <Chart />\n+          <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n+        </div>\n+      </div>\n+\n+    </section>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195328423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,54 +29,13 @@\n             ))}\n           </Accordion>\n         </div>\n \n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-xs:scale-[1.10] max-xs:-translate-x-2'>\n+        <div className='w-1/2 mt-auto relative max-lg:w-full max-xs:scale-[1.08] max-xs:-translate-x-2'>\n           <Chart />\n-          <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n+          <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly users grow)\"}</p>\n         </div>\n       </div>\n \n     </section>\n   )\n-}\n-import React from 'react'\n-import { useTranslations } from 'next-intl'\n-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n-import Chart from './chart'\n-\n-type Props = {}\n-\n-export default function About({ }: Props) {\n-  const t = useTranslations(\"about\")\n-\n-  console.log(t(\"questions\"));\n-\n-  return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n-      <div className='w-full flex gap-6 max-lg:flex-col'>\n-        <div className='w-1/2 max-lg:w-full'>\n-          <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n-          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n-\n-          <Accordion type=\"single\" collapsible className='mt-12'>\n-            {new Array(5).fill(0).map((_, i) => (\n-              <AccordionItem value={`item-${i + 1}`} key={i}>\n-                <AccordionTrigger className='text-left'>{t(`question-${i + 1}.question`)}</AccordionTrigger>\n-                <AccordionContent>\n-                  {t(`question-${i + 1}.answer`)}\n-                </AccordionContent>\n-              </AccordionItem>\n-            ))}\n-          </Accordion>\n-        </div>\n-\n-        <div className='w-1/2 mt-auto relative max-lg:w-full max-xs:scale-[1.10] max-xs:-translate-x-3'>\n-          <Chart />\n-          <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly user grow)\"}</p>\n-        </div>\n-      </div>\n-\n-    </section>\n-  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195336695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,7 @@\n           <Chart />\n           <p className='text-[#888888] text-xs absolute right-0'>{\"(monthly users grow)\"}</p>\n         </div>\n       </div>\n-\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195587057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,13 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'\n-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n import Chart from './chart'\n \n type Props = {}\n \n export default function About({ }: Props) {\n   const t = useTranslations(\"about\")\n-\n-  console.log(t(\"questions\"));\n-\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n"
+                },
+                {
+                    "date": 1699197756840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n export default function About({ }: Props) {\n   const t = useTranslations(\"about\")\n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2'>\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id=\"about\">\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n           <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n"
+                },
+                {
+                    "date": 1699198105314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id=\"about\">\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n-          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n+          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-3xl'>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value={`item-${i + 1}`} key={i}>\n"
+                },
+                {
+                    "date": 1699198126497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     <section className='max-w-[1280px] flex flex-col mx-auto py-16 px-2' id=\"about\">\n       <div className='w-full flex gap-6 max-lg:flex-col'>\n         <div className='w-1/2 max-lg:w-full'>\n           <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n-          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-3xl'>{t(\"heading\")}</h2>\n+          <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-lg:text-2xl'>{t(\"heading\")}</h2>\n \n           <Accordion type=\"single\" collapsible className='mt-12'>\n             {new Array(5).fill(0).map((_, i) => (\n               <AccordionItem value={`item-${i + 1}`} key={i}>\n"
+                }
+            ],
+            "date": 1699190052125,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\nexport default function About({ }: Props) {\n  return (\n    <div>About</div>\n  )\n}"
+        }
+    ]
+}

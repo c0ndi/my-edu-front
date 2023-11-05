@@ -1,0 +1,142 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/app.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1699190060094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699195374809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import React from 'react'\n+\n+type Props = {}\n+\n+export default function App({ }: Props) {\n+  return (\n+    <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n+      <div className='w-full flex items-center max-lg:flex-col'>\n+      </div>\n+    </section>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195388804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,5 @@\n       <div className='w-full flex items-center max-lg:flex-col'>\n       </div>\n     </section>\n   )\n-}\n-import React from 'react'\n-\n-type Props = {}\n-\n-export default function App({ }: Props) {\n-  return (\n-    <div>App</div>\n-  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195419117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,12 @@\n export default function App({ }: Props) {\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n+        <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n+        <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n+\n+\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195456062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\n+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n \n type Props = {}\n \n export default function App({ }: Props) {\n+  const t = useTranslations(\"about\")\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195463982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\n-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n+import { useTranslations } from 'next-intl'\n \n type Props = {}\n \n export default function App({ }: Props) {\n"
+                },
+                {
+                    "date": 1699195476229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,15 @@\n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n+  const test = \"\"l\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195513236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n-  const test = \"\"l\n+  const test = \"\";\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195519666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n-  const test = \"\";\n+  const test: any;\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195531806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n   const test: any;\n+\n+  console.log(test);\n+\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195541039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,8 @@\n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n-  const test: any;\n-\n-  console.log(test);\n-\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195592696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n+\n+  const test: any = \"\"\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195675401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"about\")\n \n-  const test: any = \"\"\n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n"
+                },
+                {
+                    "date": 1699195694508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n+        <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n+\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195713974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,17 @@\n \n type Props = {}\n \n export default function App({ }: Props) {\n-  const t = useTranslations(\"about\")\n+  const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n       <div className='w-full flex items-center max-lg:flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n         <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n-\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195720855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='w-full flex items-center max-lg:flex-col'>\n+      <div className='w-full flex items-center flex-col'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n         <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n"
+                },
+                {
+                    "date": 1699195731815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='w-full flex items-center flex-col'>\n+      <div className='w-full flex items-center flex-col w-[300px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n         <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n"
+                },
+                {
+                    "date": 1699195738477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n export default function App({ }: Props) {\n   const t = useTranslations(\"app\")\n \n   return (\n-    <section className='max-w-[1280px] flex flex-col mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='w-full flex items-center flex-col w-[300px]'>\n+    <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n+      <div className='flex items-center flex-col w-[300px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n         <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n"
+                },
+                {
+                    "date": 1699195747515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n   const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='flex items-center flex-col w-[300px]'>\n+      <div className='flex items-center flex-col w-[500px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-        <p className='font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195760285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <div className='flex items-center flex-col w-[500px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-        <p className='text-center font-medium text-lg text-[#64748B] py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195802938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <div className='flex items-center flex-col w-[500px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n         <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n \n-        <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-sm text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195819929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n \n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n       <div className='flex items-center flex-col w-[500px]'>\n-        <p className='text-[#E54141] font-extrabold'>{t(\"subheading\")}</p>\n-        <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"heading\")}</h2>\n+        <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n+        <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n-        <p className='text-center font-medium text-sm text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699195825725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n       <div className='flex items-center flex-col w-[500px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n-        <h2 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n+        <h2 className='text-centerfont-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n"
+                },
+                {
+                    "date": 1699195831255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n   const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='flex items-center flex-col w-[500px]'>\n+      <div className='flex items-center flex-col w-[800px]'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n-        <h2 className='text-centerfont-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n+        <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n     </section>\n"
+                },
+                {
+                    "date": 1699196421642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n+import { Button } from '@/components/ui/button'\n \n type Props = {}\n \n export default function App({ }: Props) {\n@@ -13,7 +14,11 @@\n         <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n+\n+      <Button>\n+        {t(\"button\")}\n+      </Button>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196429141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n       <Button>\n-        {t(\"button\")}\n+        {t(\"button.text\")}\n       </Button>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196436077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,12 @@\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n-      <Button>\n-        {t(\"button.text\")}\n-      </Button>\n+      <Link>\n+        <Button>\n+          {t(\"button.text\")}\n+        </Button>\n+      </Link>\n     </section>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196467555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,11 +15,11 @@\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n-      <Link>\n+      <Link href={t(\"aboutButton.link\")}>\n         <Button>\n-          {t(\"button.text\")}\n+          {t(\"aboutButton.text\")}\n         </Button>\n       </Link>\n     </section>\n   )\n"
+                },
+                {
+                    "date": 1699196482633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n import React from 'react'\n import { useTranslations } from 'next-intl'\n import { Button } from '@/components/ui/button'\n+import Link from 'next/link'\n \n type Props = {}\n \n export default function App({ }: Props) {\n   const t = useTranslations(\"app\")\n \n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n-      <div className='flex items-center flex-col w-[800px]'>\n+      <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n         <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n         <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n"
+                },
+                {
+                    "date": 1699196508134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n         <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n-        <p className='text-center font-medium text-lg text-white py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-lg text-[#fafafa] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n       <Link href={t(\"aboutButton.link\")}>\n         <Button>\n"
+                },
+                {
+                    "date": 1699196517576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n         <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n \n-        <p className='text-center font-medium text-lg text-[#fafafa] py-4 max-lg:text-base'>{t(\"description\")}</p>\n+        <p className='text-center font-medium text-lg text-[#e9e9e9] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n       <Link href={t(\"aboutButton.link\")}>\n         <Button>\n"
+                },
+                {
+                    "date": 1699198123634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   return (\n     <section className='max-w-[1280px] flex flex-col items-center mx-auto py-12 px-2 overflow-hidden'>\n       <div className='flex items-center flex-col w-[800px] max-lg:w-full'>\n         <p className='text-[#E54141] font-extrabold'>{t(\"heading\")}</p>\n-        <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] '>{t(\"subheading\")}</h2>\n+        <h2 className='text-center font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#646464] max-md:text-2xl'>{t(\"subheading\")}</h2>\n \n         <p className='text-center font-medium text-lg text-[#e9e9e9] py-4 max-lg:text-base'>{t(\"description\")}</p>\n       </div>\n \n"
+                }
+            ],
+            "date": 1699190060094,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\nexport default function App({ }: Props) {\n  return (\n    <div>App</div>\n  )\n}"
+        }
+    ]
+}

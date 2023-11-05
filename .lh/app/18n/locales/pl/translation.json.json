@@ -1,0 +1,54 @@
+{
+    "sourceFile": "app/18n/locales/pl/translation.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1699186469926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699186483767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"hero\": {\n     \"badge\": \"Nowy system tworzenia klasówek\",\n     \"heading\": \"ZINTEGROWANY SYSTEM ZARZĄDZANIA DLA SZKÓŁ\",\n-    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi. \"\n+    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n   }\n }\n"
+                },
+                {
+                    "date": 1699186524962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n {\n   \"hero\": {\n     \"badge\": \"Nowy system tworzenia klasówek\",\n     \"heading\": \"ZINTEGROWANY SYSTEM ZARZĄDZANIA DLA SZKÓŁ\",\n-    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n+    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\",\n+    \"button\": {\n+      \"text\": \"Dowiedz się więcej\",\n+      \"link\": \"/pl/dashboard\"\n+    }\n   }\n }\n"
+                },
+                {
+                    "date": 1699186595151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,14 @@\n   \"hero\": {\n     \"badge\": \"Nowy system tworzenia klasówek\",\n     \"heading\": \"ZINTEGROWANY SYSTEM ZARZĄDZANIA DLA SZKÓŁ\",\n     \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\",\n-    \"button\": {\n+    \"dashboardButton\": {\n+      \"text\": \"Idź do panelu\",\n+      \"link\": \"/pl/dashboard\"\n+    },\n+    \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n-      \"link\": \"/pl/dashboard\"\n+      \"link\": \"/pl/about\"\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1699186601412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n       \"link\": \"/pl/dashboard\"\n     },\n     \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n-      \"link\": \"/pl/about\"\n+      \"link\": \"#about\"\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1699186610131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n       \"link\": \"/pl/dashboard\"\n     },\n     \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n-      \"link\": \"#about\"\n+      \"link\": \"/pl/#about\"\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1699186814682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,11 @@\n     \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n       \"link\": \"/pl/#about\"\n     }\n+  },\n+  \"about\": {\n+    \"subheading\": \"NAJNOWSZE, NAJSZYNSZE, ROZWIĄZANIE DLA SZKÓŁ\",\n+    \"heading\": \"EXAMIFAST\",\n+    \"description\": \"Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.\"\n   }\n }\n"
+                },
+                {
+                    "date": 1699186914963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,11 @@\n   },\n   \"about\": {\n     \"subheading\": \"NAJNOWSZE, NAJSZYNSZE, ROZWIĄZANIE DLA SZKÓŁ\",\n     \"heading\": \"EXAMIFAST\",\n-    \"description\": \"Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.\"\n+    \"description\": \"Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.\",\n+    \"aboutButton\": {\n+      \"text\": \"Dowiedz się więcej\",\n+      \"link\": \"link-examifast.pl\"\n+    }\n   }\n }\n"
+                },
+                {
+                    "date": 1699186929726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n     \"heading\": \"EXAMIFAST\",\n     \"description\": \"Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.\",\n     \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n-      \"link\": \"link-examifast.pl\"\n+      \"link\": \"https://link-examifast.pl\"\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1699187946304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,40 @@\n       \"text\": \"Dowiedz się więcej\",\n       \"link\": \"/pl/#about\"\n     }\n   },\n-  \"about\": {\n+  \"app\": {\n     \"subheading\": \"NAJNOWSZE, NAJSZYNSZE, ROZWIĄZANIE DLA SZKÓŁ\",\n     \"heading\": \"EXAMIFAST\",\n     \"description\": \"Oto nowoczesne narzędzie, które rewolucjonizuje proces oceniania w edukacji, umożliwiając nauczycielom szybkie sprawdzanie testów w ciągu kilku sekund. Aplikacja ta zapewnia natychmiastową analizę wyników, co pozwala na efektywne śledzenie postępów uczniów i dostosowywanie metod nauczania do indywidualnych potrzeb uczących się.\",\n     \"aboutButton\": {\n       \"text\": \"Dowiedz się więcej\",\n       \"link\": \"https://link-examifast.pl\"\n     }\n+  },\n+  \"about\": {\n+    \"subheading\": \"O NAS\",\n+    \"heading\": \"DLACZEGO AKURAT MY?\",\n+    \"questions\": [\n+      {\n+        \"question\": \"Jakie są główne zalety Waszego dziennika elektronicznego w porównaniu do innych dostępnych na rynku?\",\n+        \"answer\": \"Nasz dziennik elektroniczny charakteryzuje się wyjątkową szybkością działania i wydajnością, umożliwiając szybkie zarządzanie codziennymi zadaniami. Oferuje również możliwości dostosowania do specyficznych wymagań każdej szkoły.\"\n+      },\n+      {\n+        \"question\": \"Czy Wasz dziennik oferuje funkcjonalności wspomagające nauczycieli w pracy?\",\n+        \"answer\": \"Tak, wyposażony jest w narzędzia automatyzujące procesy takie jak tworzenie i sprawdzanie testów, co pozwala nauczycielom skoncentrować się bardziej na pracy z uczniami.\"\n+      },\n+      {\n+        \"question\": \"Czy Wasza platforma jest dostępna na różnych urządzeniach?\",\n+        \"answer\": \"Nasz system jest zbudowany w oparciu o zasady responsywnego designu, co gwarantuje jego dostępność i pełną funkcjonalność na wszelkiego rodzaju urządzeniach.\"\n+      },\n+      {\n+        \"question\": \"W jaki sposób Wasz dziennik ułatwia komunikację między szkołą a rodzicami?\",\n+        \"answer\": \"System zawiera wbudowane narzędzia komunikacyjne, które ułatwiają informowanie rodziców o postępach uczniów oraz umożliwiają bieżący kontakt z nauczycielami.\"\n+      },\n+      {\n+        \"question\": \"Czy Wasz dziennik jest bezpieczny i jak dbacie o prywatność danych użytkowników?\",\n+        \"answer\": \"Stosujemy zaawansowane protokoły szyfrowania i regularne aktualizacje systemów, aby chronić dane osobowe użytkowników, przestrzegając aktualnych przepisów o ochronie danych.\"\n+      }\n+    ]\n   }\n }\n"
+                }
+            ],
+            "date": 1699186469926,
+            "name": "Commit-0",
+            "content": "{\n  \"hero\": {\n    \"badge\": \"Nowy system tworzenia klasówek\",\n    \"heading\": \"ZINTEGROWANY SYSTEM ZARZĄDZANIA DLA SZKÓŁ\",\n    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi. \"\n  }\n}\n"
+        }
+    ]
+}

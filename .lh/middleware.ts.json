@@ -1,0 +1,34 @@
+{
+    "sourceFile": "middleware.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1699188811402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699189087936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,15 @@\n-import { i18nRouter } from \"next-i18n-router\";\n-import { NextRequest } from \"next/server\";\n-import i18nConfig from \"./i18nConfig\";\n+import createMiddleware from \"next-intl/middleware\";\n \n-export function middleware(request: NextRequest) {\n-  return i18nRouter(request, i18nConfig);\n-}\n+export default createMiddleware({\n+  // A list of all locales that are supported\n+  locales: [\"en\", \"de\"],\n \n-// applies this middleware only to files in the app directory\n+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)\n+  defaultLocale: \"en\",\n+});\n+\n export const config = {\n-  matcher: \"/((?!api|static|.*..*|_next).*)\",\n+  // Skip all paths that should not be internationalized. This example skips\n+  // certain folders and all pathnames with a dot (e.g. favicon.ico)\n+  matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n };\n"
+                },
+                {
+                    "date": 1699189095998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n   // A list of all locales that are supported\n-  locales: [\"en\", \"de\"],\n+  languages: [\"en\", \"pl\", \"ua\", \"de\"],\n \n   // If this locale is matched, pathnames work without a prefix (e.g. `/about`)\n   defaultLocale: \"en\",\n });\n"
+                },
+                {
+                    "date": 1699189102811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n   // A list of all locales that are supported\n-  languages: [\"en\", \"pl\", \"ua\", \"de\"],\n+  locales: [\"en\", \"pl\", \"ua\", \"de\"],\n \n   // If this locale is matched, pathnames work without a prefix (e.g. `/about`)\n   defaultLocale: \"en\",\n });\n"
+                },
+                {
+                    "date": 1699189110762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,10 @@\n import createMiddleware from \"next-intl/middleware\";\n \n export default createMiddleware({\n-  // A list of all locales that are supported\n   locales: [\"en\", \"pl\", \"ua\", \"de\"],\n-\n-  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)\n-  defaultLocale: \"en\",\n+  defaultLocale: \"pl\",\n });\n \n export const config = {\n-  // Skip all paths that should not be internationalized. This example skips\n-  // certain folders and all pathnames with a dot (e.g. favicon.ico)\n   matcher: [\"/((?!api|_next|_vercel|.*\\\\..*).*)\"],\n };\n"
+                }
+            ],
+            "date": 1699188811402,
+            "name": "Commit-0",
+            "content": "import { i18nRouter } from \"next-i18n-router\";\nimport { NextRequest } from \"next/server\";\nimport i18nConfig from \"./i18nConfig\";\n\nexport function middleware(request: NextRequest) {\n  return i18nRouter(request, i18nConfig);\n}\n\n// applies this middleware only to files in the app directory\nexport const config = {\n  matcher: \"/((?!api|static|.*..*|_next).*)\",\n};\n"
+        }
+    ]
+}

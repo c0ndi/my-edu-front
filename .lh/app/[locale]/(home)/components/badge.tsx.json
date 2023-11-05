@@ -1,0 +1,98 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/badge.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1699195856237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699195990722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react'\n+import Icon from '@/pubic/images/home/badge/icon'\n \n type Props = {}\n \n export default function Badge({ }: Props) {\n   return (\n-    <div>Badge</div>\n+    <div></div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196069458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,14 @@\n import React from 'react'\n-import Icon from '@/pubic/images/home/badge/icon'\n+import Icon from '@/pubic/images/home/badge/icon.svg'\n \n-type Props = {}\n+type Props = {\n+  text: string;\n+}\n \n-export default function Badge({ }: Props) {\n+export default function Badge({ text }: Props) {\n   return (\n-    <div></div>\n+    <div>\n+      <p></p>\n+    </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196104016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react'\n import Icon from '@/pubic/images/home/badge/icon.svg'\n+import Image from 'next/image'\n \n type Props = {\n   text: string;\n }\n \n export default function Badge({ text }: Props) {\n   return (\n     <div>\n-      <p></p>\n+      <Image src={Icon} alt={\"Badge icon.\"} />\n+      <p>{text}</p>\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196111167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n export default function Badge({ text }: Props) {\n   return (\n     <div>\n-      <Image src={Icon} alt={\"Badge icon.\"} />\n+      <Image src={Icon} alt={\"Badge icon.\"} width={12} height={12} />\n       <p>{text}</p>\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196121609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,14 @@\n \n export default function Badge({ text }: Props) {\n   return (\n     <div>\n-      <Image src={Icon} alt={\"Badge icon.\"} width={12} height={12} />\n+      <Image\n+        src={Icon}\n+        alt={\"Badge icon.\"}\n+        width={12}\n+        height={12}\n+      \\ />\n       <p>{text}</p>\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196129505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n         height={12}\n-      \\ />\n-      <p>{text}</p>\n+      />\n+      <p className='text-xs'>{text}</p>\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196147993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,15 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div>\n+    <div className='flex items-center gap-2'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n         height={12}\n       />\n-      <p className='text-xs'>{text}</p>\n+      <p className='text-xs text-white'>{text}</p>\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196176567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\n import Icon from '@/pubic/images/home/badge/icon.svg'\n+import Arrow from '@/pubic/images/home/badge/arrow.svg'\n import Image from 'next/image'\n \n type Props = {\n   text: string;\n"
+                },
+                {
+                    "date": 1699196182336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,13 @@\n         width={12}\n         height={12}\n       />\n       <p className='text-xs text-white'>{text}</p>\n+      <Image\n+        src={Icon}\n+        alt={\"Badge icon.\"}\n+        width={12}\n+        height={12}\n+      />\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196187978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n         height={12}\n       />\n       <p className='text-xs text-white'>{text}</p>\n       <Image\n-        src={Icon}\n-        alt={\"Badge icon.\"}\n+        src={Arrow}\n+        alt={\"Arrow icon.\"}\n         width={12}\n         height={12}\n       />\n     </div>\n"
+                },
+                {
+                    "date": 1699196199069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n       <p className='text-xs text-white'>{text}</p>\n       <Image\n         src={Arrow}\n         alt={\"Arrow icon.\"}\n-        width={12}\n-        height={12}\n+        width={9}\n+        height={9}\n       />\n     </div>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196261381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\n-import Icon from '@/pubic/images/home/badge/icon.svg'\n-import Arrow from '@/pubic/images/home/badge/arrow.svg'\n+import Icon from '@/public/images/home/badge/icon.svg'\n+import Arrow from '@/public/images/home/badge/arrow.svg'\n import Image from 'next/image'\n \n type Props = {\n   text: string;\n"
+                },
+                {
+                    "date": 1699196270071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='flex items-center gap-2'>\n+    <div className='flex items-center gap-2 bg-black px-2 py-1'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n"
+                },
+                {
+                    "date": 1699196277816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='flex items-center gap-2 bg-black px-2 py-1'>\n+    <div className='flex items-center gap-2 bg-black px-2 py-1 w-max rounded-full'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n"
+                },
+                {
+                    "date": 1699196286843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='flex items-center gap-2 bg-black px-2 py-1 w-max rounded-full'>\n+    <div className='flex items-center gap-2 bg-black px-2 py-1 w-max rounded-md'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n"
+                },
+                {
+                    "date": 1699196313593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='flex items-center gap-2 bg-black px-2 py-1 w-max rounded-md'>\n+    <div className='flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n"
+                },
+                {
+                    "date": 1699196319504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n+    <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n       <Image\n         src={Icon}\n         alt={\"Badge icon.\"}\n         width={12}\n"
+                },
+                {
+                    "date": 1699196333099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,31 @@\n import React from 'react'\n import Icon from '@/public/images/home/badge/icon.svg'\n import Arrow from '@/public/images/home/badge/arrow.svg'\n import Image from 'next/image'\n+import Link from 'next/link'\n \n type Props = {\n   text: string;\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n-      <Image\n-        src={Icon}\n-        alt={\"Badge icon.\"}\n-        width={12}\n-        height={12}\n-      />\n-      <p className='text-xs text-white'>{text}</p>\n-      <Image\n-        src={Arrow}\n-        alt={\"Arrow icon.\"}\n-        width={9}\n-        height={9}\n-      />\n-    </div>\n+    <Link>\n+      <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n+        <Image\n+          src={Icon}\n+          alt={\"Badge icon.\"}\n+          width={12}\n+          height={12}\n+        />\n+        <p className='text-xs text-white'>{text}</p>\n+        <Image\n+          src={Arrow}\n+          alt={\"Arrow icon.\"}\n+          width={9}\n+          height={9}\n+        />\n+      </div>\n+    </Link>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699196349836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <Link>\n+    <Link href=\"https://examifast.com\">\n       <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n         <Image\n           src={Icon}\n           alt={\"Badge icon.\"}\n"
+                },
+                {
+                    "date": 1699196354914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\n \n export default function Badge({ text }: Props) {\n   return (\n-    <Link href=\"https://examifast.com\">\n+    <Link href=\"https://examifast.com\" target='_blank'>\n       <div className='mb-2 flex items-center gap-2 bg-[#27272A] px-2 py-1 w-max rounded-md'>\n         <Image\n           src={Icon}\n           alt={\"Badge icon.\"}\n"
+                }
+            ],
+            "date": 1699195856237,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\nexport default function Badge({ }: Props) {\n  return (\n    <div>Badge</div>\n  )\n}"
+        }
+    ]
+}

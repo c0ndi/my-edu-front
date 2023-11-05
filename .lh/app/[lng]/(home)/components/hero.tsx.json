@@ -1,0 +1,34 @@
+{
+    "sourceFile": "app/[lng]/(home)/components/hero.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1699185852227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699188865787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n \n \n export function Hero({ }: Props) {\n+  const { t } = useTranslation('home')\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                },
+                {
+                    "date": 1699188900348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n+import { useTranslation } from '@/app/18n'\n import React from 'react'\n \n type Props = {}\n \n \n \n export function Hero({ }: Props) {\n-  const { t } = useTranslation('home')\n+  const { t } = useTranslation('pl', 'home')\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                },
+                {
+                    "date": 1699188905921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n \n export function Hero({ }: Props) {\n   const { t } = useTranslation('pl', 'home')\n+  console.log(t('hero.title'));\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                },
+                {
+                    "date": 1699188976326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n \n export function Hero({ }: Props) {\n   const { t } = useTranslation('pl', 'home')\n-  console.log(t('hero.title'));\n+  console.log(t);\n   return (\n     <section>\n       <div>\n         <h1></h1>\n"
+                }
+            ],
+            "date": 1699185852227,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\n\n\nexport function Hero({ }: Props) {\n  return (\n    <section>\n      <div>\n        <h1></h1>\n      </div>\n      <div></div>\n    </section>\n  )\n}"
+        }
+    ]
+}

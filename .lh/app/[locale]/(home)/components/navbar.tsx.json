@@ -1,0 +1,362 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/navbar.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 86,
+            "patches": [
+                {
+                    "date": 1699197844420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699198203782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n import React from 'react'\n \n type Props = {}\n \n+export function Logo() {\n+  return (\n+    <div>Logo</div>\n+  )\n+\n+}\n+\n export default function Navbar({ }: Props) {\n   return (\n     <div>Navbar</div>\n   )\n"
+                },
+                {
+                    "date": 1699198243447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React from 'react'\n+import Logo from '@/public/images/home/navbar/logo.svg'\n \n type Props = {}\n \n export function Logo() {\n   return (\n     <div>Logo</div>\n   )\n-\n }\n \n export default function Navbar({ }: Props) {\n   return (\n"
+                },
+                {
+                    "date": 1699198266984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\n-import Logo from '@/public/images/home/navbar/logo.svg'\n+import LogoIcon from '@/public/images/shared/logo.svg'\n \n type Props = {}\n \n export function Logo() {\n"
+                },
+                {
+                    "date": 1699198279303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,15 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <div>Logo</div>\n+    <div>\n+      <Image\n+        src={LogoIcon}\n+        alt={\"Logo.\"}\n+        width={26}\n+        height={26}\n+    </div>\n   )\n }\n \n export default function Navbar({ }: Props) {\n"
+                },
+                {
+                    "date": 1699198292329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n+import Image from 'next/image'\n \n type Props = {}\n \n export function Logo() {\n@@ -10,8 +11,9 @@\n         src={LogoIcon}\n         alt={\"Logo.\"}\n         width={26}\n         height={26}\n+      />\n     </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1699198305140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,12 @@\n         alt={\"Logo.\"}\n         width={26}\n         height={26}\n       />\n+\n+      <p>\n+        MY<span>EDU</span>\n+      </p>\n     </div>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1699198312179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         width={26}\n         height={26}\n       />\n \n-      <p>\n+      <p className='text-lg'>\n         MY<span>EDU</span>\n       </p>\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1699198319187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         width={26}\n         height={26}\n       />\n \n-      <p className='text-lg'>\n+      <p className='text-xl font-bold'>\n         MY<span>EDU</span>\n       </p>\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1699198326857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         height={26}\n       />\n \n       <p className='text-xl font-bold'>\n-        MY<span>EDU</span>\n+        MY<span className='font-light'>EDU</span>\n       </p>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1699198342044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         width={26}\n         height={26}\n       />\n \n-      <p className='text-xl font-bold'>\n+      <p className='text-xl font-bold text-black'>\n         MY<span className='font-light'>EDU</span>\n       </p>\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1699198349821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,9 @@\n }\n \n export default function Navbar({ }: Props) {\n   return (\n-    <div>Navbar</div>\n+    <nav>\n+\n+    </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699198365994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,10 @@\n \n export default function Navbar({ }: Props) {\n   return (\n     <nav>\n+      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+      </div\n \n     </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699198396699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,11 +22,10 @@\n }\n \n export default function Navbar({ }: Props) {\n   return (\n-    <nav>\n+    <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n-      </div\n-\n+      </div>\n     </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699198408063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n export default function Navbar({ }: Props) {\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+        <Logo />\n       </div>\n     </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699198415445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <div>\n+    <div className='flex items-center'>\n       <Image\n         src={LogoIcon}\n         alt={\"Logo.\"}\n         width={26}\n"
+                },
+                {
+                    "date": 1699198424481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,17 +5,17 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <div className='flex items-center'>\n+    <div className='flex items-center gap-2'>\n       <Image\n         src={LogoIcon}\n         alt={\"Logo.\"}\n         width={26}\n         height={26}\n       />\n \n-      <p className='text-xl font-bold text-black'>\n+      <p className='text-xl font-semibold text-black'>\n         MY<span className='font-light'>EDU</span>\n       </p>\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1699198429759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         width={26}\n         height={26}\n       />\n \n-      <p className='text-xl font-semibold text-black'>\n+      <p className='text-2xl font-bold text-black'>\n         MY<span className='font-light'>EDU</span>\n       </p>\n     </div>\n   )\n"
+                },
+                {
+                    "date": 1699198445107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,20 +5,22 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <div className='flex items-center gap-2'>\n-      <Image\n-        src={LogoIcon}\n-        alt={\"Logo.\"}\n-        width={26}\n-        height={26}\n-      />\n+    <Link>\n+      <div className='flex items-center gap-2'>\n+        <Image\n+          src={LogoIcon}\n+          alt={\"Logo.\"}\n+          width={32}\n+          height={32}\n+        />\n \n-      <p className='text-2xl font-bold text-black'>\n-        MY<span className='font-light'>EDU</span>\n-      </p>\n-    </div>\n+        <p className='text-2xl font-bold text-black'>\n+          MY<span className='font-light'>EDU</span>\n+        </p>\n+    </Link>\n+    </div >\n   )\n }\n \n export default function Navbar({ }: Props) {\n"
+                },
+                {
+                    "date": 1699198451666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <Link>\n+    <Link href=\"#\">\n       <div className='flex items-center gap-2'>\n         <Image\n           src={LogoIcon}\n           alt={\"Logo.\"}\n@@ -17,10 +17,10 @@\n \n         <p className='text-2xl font-bold text-black'>\n           MY<span className='font-light'>EDU</span>\n         </p>\n+      </div>\n     </Link>\n-    </div >\n   )\n }\n \n export default function Navbar({ }: Props) {\n"
+                },
+                {
+                    "date": 1699198456920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,22 +5,20 @@\n type Props = {}\n \n export function Logo() {\n   return (\n-    <Link href=\"#\">\n-      <div className='flex items-center gap-2'>\n-        <Image\n-          src={LogoIcon}\n-          alt={\"Logo.\"}\n-          width={32}\n-          height={32}\n-        />\n+    <div className='flex items-center gap-2'>\n+      <Image\n+        src={LogoIcon}\n+        alt={\"Logo.\"}\n+        width={32}\n+        height={32}\n+      />\n \n-        <p className='text-2xl font-bold text-black'>\n-          MY<span className='font-light'>EDU</span>\n-        </p>\n-      </div>\n-    </Link>\n+      <p className='text-2xl font-bold text-black'>\n+        MY<span className='font-light'>EDU</span>\n+      </p>\n+    </div>\n   )\n }\n \n export default function Navbar({ }: Props) {\n"
+                },
+                {
+                    "date": 1699198462255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n \n export default function Navbar({ }: Props) {\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n-      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-8 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n       </div>\n     </nav>\n   )\n"
+                },
+                {
+                    "date": 1699198488708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n import Image from 'next/image'\n+import { Button } from '@/components/ui/button'\n \n type Props = {}\n \n export function Logo() {\n@@ -25,8 +26,12 @@\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n+\n+        <Button>\n+          Dashboard\n+        </Button>\n       </div>\n     </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699198498948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto justify-between items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n-        <Button>\n+        <Button variant={\"secondary\"} size={\"lg\"}>\n           Dashboard\n         </Button>\n       </div>\n     </nav>\n"
+                },
+                {
+                    "date": 1699198937442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,13 @@\n \n export default function Navbar({ }: Props) {\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n-      <div className='max-w-[1280px] flex mx-auto justify-between items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n+\n+\n         <Button variant={\"secondary\"} size={\"lg\"}>\n           Dashboard\n         </Button>\n       </div>\n"
+                },
+                {
+                    "date": 1699198964493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n+import { Popover } from '@/components/ui/popover'\n \n type Props = {}\n \n export function Logo() {\n@@ -27,11 +28,16 @@\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n+        <Popover>\n \n+          <PopoverTrigger asChild>\n+            <Button variant=\"outline\">Open popover</Button>\n+          </PopoverTrigger>\n+        </Popover>\n \n-        <Button variant={\"secondary\"} size={\"lg\"}>\n+        <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n           Dashboard\n         </Button>\n       </div>\n     </nav>\n"
+                },
+                {
+                    "date": 1699198980941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n-import { Popover } from '@/components/ui/popover'\n+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n \n type Props = {}\n \n export function Logo() {\n@@ -29,12 +29,14 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n-\n           <PopoverTrigger asChild>\n             <Button variant=\"outline\">Open popover</Button>\n           </PopoverTrigger>\n+          <PopoverContent className=\"w-80\">\n+\n+          </PopoverContent>\n         </Popover>\n \n         <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n           Dashboard\n"
+                },
+                {
+                    "date": 1699199011597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import LogoIcon from '@/public/images/shared/logo.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n+import { useTranslations } from 'next-intl'\n \n type Props = {}\n \n export function Logo() {\n@@ -23,8 +24,9 @@\n   )\n }\n \n export default function Navbar({ }: Props) {\n+  const t = useTranslations(\"navbar\")\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699199082036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,16 +25,22 @@\n }\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n+\n+  const langs = [{\n+    locale: \"en\",\n+    label: \"English\"\n+  }]\n+\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\">Open popover</Button>\n+            <Button variant=\"outline\"></Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199120846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,12 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n-  const langs = [{\n-    locale: \"en\",\n-    label: \"English\"\n+  const langs = [{ locale: \"ua\", label: \"Українська\" }, { locale: \"en\", label: \"English\" }, {\n+    locale: \"pl\",\n+    label: \"Polski\"\n+\n   }]\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n"
+                },
+                {
+                    "date": 1699199141201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n \n   const langs = [{ locale: \"ua\", label: \"Українська\" }, { locale: \"en\", label: \"English\" }, {\n     locale: \"pl\",\n     label: \"Polski\"\n-\n+  }, {\n+    locale: \"de\",\n+    label: \"Deutsch\"\n   }]\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n"
+                },
+                {
+                    "date": 1699199150322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,15 +26,18 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n-  const langs = [{ locale: \"ua\", label: \"Українська\" }, { locale: \"en\", label: \"English\" }, {\n-    locale: \"pl\",\n-    label: \"Polski\"\n-  }, {\n-    locale: \"de\",\n-    label: \"Deutsch\"\n-  }]\n+  const langs = [\n+    { locale: \"ua\", label: \"Українська\" },\n+    { locale: \"en\", label: \"English\" },\n+    {\n+      locale: \"pl\",\n+      label: \"Polski\"\n+    }, {\n+      locale: \"de\",\n+      label: \"Deutsch\"\n+    }]\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n"
+                },
+                {
+                    "date": 1699199155838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,9 @@\n \n   const langs = [\n     { locale: \"ua\", label: \"Українська\" },\n     { locale: \"en\", label: \"English\" },\n-    {\n-      locale: \"pl\",\n-      label: \"Polski\"\n-    }, {\n+    { locale: \"pl\", label: \"Polski\" }, {\n       locale: \"de\",\n       label: \"Deutsch\"\n     }]\n \n"
+                },
+                {
+                    "date": 1699199167760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,10 @@\n \n   const langs = [\n     { locale: \"ua\", label: \"Українська\" },\n     { locale: \"en\", label: \"English\" },\n-    { locale: \"pl\", label: \"Polski\" }, {\n-      locale: \"de\",\n-      label: \"Deutsch\"\n-    }]\n+    { locale: \"pl\", label: \"Polski\" },\n+    { locale: \"de\", label: \"Deutsch\" }]\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n"
+                },
+                {
+                    "date": 1699199179846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,16 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n+  const router = useRouter()\n+\n   const langs = [\n     { locale: \"ua\", label: \"Українська\" },\n     { locale: \"en\", label: \"English\" },\n     { locale: \"pl\", label: \"Polski\" },\n-    { locale: \"de\", label: \"Deutsch\" }]\n+    { locale: \"de\", label: \"Deutsch\" }\n+  ]\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n"
+                },
+                {
+                    "date": 1699199191008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n+import { useRouter } from 'next/navigation'\n \n type Props = {}\n \n export function Logo() {\n@@ -27,9 +28,11 @@\n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n   const router = useRouter()\n+  console.log();\n \n+\n   const langs = [\n     { locale: \"ua\", label: \"Українська\" },\n     { locale: \"en\", label: \"English\" },\n     { locale: \"pl\", label: \"Polski\" },\n"
+                },
+                {
+                    "date": 1699199198043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n-import { useRouter } from 'next/navigation'\n+import { useRouter } from 'next/router'\n \n type Props = {}\n \n export function Logo() {\n"
+                },
+                {
+                    "date": 1699199205216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n-import { useRouter } from 'next/router'\n+import { useRouter } from 'next/navigation'\n \n type Props = {}\n \n export function Logo() {\n"
+                },
+                {
+                    "date": 1699199226211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,16 +30,8 @@\n \n   const router = useRouter()\n   console.log();\n \n-\n-  const langs = [\n-    { locale: \"ua\", label: \"Українська\" },\n-    { locale: \"en\", label: \"English\" },\n-    { locale: \"pl\", label: \"Polski\" },\n-    { locale: \"de\", label: \"Deutsch\" }\n-  ]\n-\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699199236752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n-import { useRouter } from 'next/navigation'\n \n type Props = {}\n \n export function Logo() {\n@@ -27,19 +26,16 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n-  const router = useRouter()\n-  console.log();\n-\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\"></Button>\n+            <Button variant=\"outline\">Ot</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199244612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,11 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n+  console.log(t(\"langs\"));\n+\n+\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699199252911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,9 @@\n \n export default function Navbar({ }: Props) {\n   const t = useTranslations(\"navbar\")\n \n-  console.log(t(\"langs\"));\n \n-\n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n"
+                },
+                {
+                    "date": 1699199267166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\">Ot</Button>\n+            <Button variant=\"outline\">{t(\"langs.lang-1\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199283687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\">{t(\"langs.lang-1\")}</Button>\n+            <Button variant=\"outline\">{t(\"langs.lang-1.text\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199343477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\">{t(\"langs.lang-1.text\")}</Button>\n+            <Button variant=\"outline\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199354880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"outline\">{t(\"langs.lang-1.name\")}</Button>\n+            <Button variant=\"primary\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199360276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild>\n-            <Button variant=\"primary\">{t(\"langs.lang-1.name\")}</Button>\n+            <Button>{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199370493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n-          <PopoverTrigger asChild>\n+          <PopoverTrigger asChild className='ml-6'>\n             <Button>{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n"
+                },
+                {
+                    "date": 1699199430590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button>{t(\"langs.lang-1.name\")}</Button>\n+            <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-80\">\n \n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699199441146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n-          <PopoverContent className=\"w-80\">\n+          <PopoverContent className=\"w-80\" >\n \n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199451156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n-          <PopoverContent className=\"w-80\" >\n+          <PopoverContent className=\"w-80 bg-white border-[#E4E4E7]\">\n \n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199457040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n-          <PopoverContent className=\"w-80 bg-white border-[#E4E4E7]\">\n+          <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n \n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199473781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,11 @@\n           <PopoverTrigger asChild className='ml-6'>\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n-\n+            {new Array(2).fill(0).map((_, i) => (\n+              <Button variant=\"ghost\" key={i}>{t(`langs.lang-${i + 1}.name`)}</Button>\n+            ))}\n           </PopoverContent>\n         </Popover>\n \n         <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n"
+                },
+                {
+                    "date": 1699199483130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(2).fill(0).map((_, i) => (\n-              <Button variant=\"ghost\" key={i}>{t(`langs.lang-${i + 1}.name`)}</Button>\n+              <p key={i}>{t(`langs.lang-${i + 1}.name`)}</p>\n             ))}\n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199488870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n             <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(2).fill(0).map((_, i) => (\n-              <p key={i}>{t(`langs.lang-${i + 1}.name`)}</p>\n+              <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n             ))}\n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199534201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,52 @@\n+import React from 'react'\n+import LogoIcon from '@/public/images/shared/logo.svg'\n+import Image from 'next/image'\n+import { Button } from '@/components/ui/button'\n+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n+import { useTranslations } from 'next-intl'\n+\n+type Props = {}\n+\n+export function Logo() {\n+  return (\n+    <div className='flex items-center gap-2'>\n+      <Image\n+        src={LogoIcon}\n+        alt={\"Logo.\"}\n+        width={32}\n+        height={32}\n+      />\n+\n+      <p className='text-2xl font-bold text-black'>\n+        MY<span className='font-light'>EDU</span>\n+      </p>\n+    </div>\n+  )\n+}\n+\n+export default function Navbar({ }: Props) {\n+  const t = useTranslations(\"navbar\")\n+\n+  return (\n+    <nav className='border-b border-[#E4E4E7]'>\n+      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+        <Logo />\n+\n+        <Popover>\n+          <PopoverTrigger asChild className='ml-6'>\n+            <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n+          </PopoverTrigger>\n+          <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n+            {new Array(4).fill(0).map((_, i) => (\n+              <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n+            ))}\n+          </PopoverContent>\n+        </Popover>\n+\n+        <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n+          Dashboard\n+        </Button>\n+      </div>\n+    </nav>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699199617559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,58 +48,5 @@\n         </Button>\n       </div>\n     </nav>\n   )\n-}\n-import React from 'react'\n-import LogoIcon from '@/public/images/shared/logo.svg'\n-import Image from 'next/image'\n-import { Button } from '@/components/ui/button'\n-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n-import { useTranslations } from 'next-intl'\n-\n-type Props = {}\n-\n-export function Logo() {\n-  return (\n-    <div className='flex items-center gap-2'>\n-      <Image\n-        src={LogoIcon}\n-        alt={\"Logo.\"}\n-        width={32}\n-        height={32}\n-      />\n-\n-      <p className='text-2xl font-bold text-black'>\n-        MY<span className='font-light'>EDU</span>\n-      </p>\n-    </div>\n-  )\n-}\n-\n-export default function Navbar({ }: Props) {\n-  const t = useTranslations(\"navbar\")\n-\n-\n-  return (\n-    <nav className='border-b border-[#E4E4E7]'>\n-      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n-        <Logo />\n-\n-        <Popover>\n-          <PopoverTrigger asChild className='ml-6'>\n-            <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n-          </PopoverTrigger>\n-          <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n-            {new Array(2).fill(0).map((_, i) => (\n-              <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n-            ))}\n-          </PopoverContent>\n-        </Popover>\n-\n-        <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n-          Dashboard\n-        </Button>\n-      </div>\n-    </nav>\n-  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699199632370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button size=\"sm\">{t(\"langs.lang-1.name\")}</Button>\n+            <Button size=\"xs\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n"
+                },
+                {
+                    "date": 1699199670099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n+import Link from 'next/link'\n \n type Props = {}\n \n export function Logo() {\n@@ -37,9 +38,11 @@\n             <Button size=\"xs\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n-              <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n+              <Link>\n+                <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n+              </Link>\n             ))}\n           </PopoverContent>\n         </Popover>\n \n"
+                },
+                {
+                    "date": 1699199719095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,10 +38,10 @@\n             <Button size=\"xs\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n-              <Link>\n-                <p key={i} className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n+              <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n+                <p className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n               </Link>\n             ))}\n           </PopoverContent>\n         </Popover>\n"
+                },
+                {
+                    "date": 1699199744406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button size=\"xs\">{t(\"langs.lang-1.name\")}</Button>\n+            <Button size=\"default\">{t(\"langs.lang-1.name\")}</Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n"
+                },
+                {
+                    "date": 1699199756803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button size=\"default\">{t(\"langs.lang-1.name\")}</Button>\n+            {t(\"langs.lang-1.name\")}\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n"
+                },
+                {
+                    "date": 1699199770930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            {t(\"langs.lang-1.name\")}\n+            <p>\n+              {t(\"langs.lang-1.name\")}\n+            </p>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n"
+                },
+                {
+                    "date": 1699199784122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,10 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n-          <PopoverTrigger asChild className='ml-6'>\n-            <p>\n+          <PopoverTrigger asChild className='ml-6 cursor-pointer'>\n+            <p className='text-black'>\n               {t(\"langs.lang-1.name\")}\n             </p>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n"
+                },
+                {
+                    "date": 1699199790238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n         <Logo />\n \n         <Popover>\n-          <PopoverTrigger asChild className='ml-6 cursor-pointer'>\n+          <PopoverTrigger asChild className='ml-6'>\n             <p className='text-black'>\n               {t(\"langs.lang-1.name\")}\n             </p>\n           </PopoverTrigger>\n"
+                },
+                {
+                    "date": 1699199796523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,12 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <p className='text-black'>\n+            <Button>\n+\n               {t(\"langs.lang-1.name\")}\n-            </p>\n+            </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n"
+                },
+                {
+                    "date": 1699199857547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n+import ArrowsLang from '@/public/images/shared/arrows-lang.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n@@ -35,10 +36,11 @@\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n             <Button>\n+              {t(\"langs.lang-1.name\")}\n \n-              {t(\"langs.lang-1.name\")}\n+\n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699199893358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,15 @@\n           <PopoverTrigger asChild className='ml-6'>\n             <Button>\n               {t(\"langs.lang-1.name\")}\n \n+              <Image\n \n+                src={ArrowsLang}\n+                alt={\"Arrows lang.\"}\n+                width={16}\n+                height={16} />\n+\n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699199903830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n-import ArrowsLang from '@/public/images/shared/arrows-lang.svg'\n+import ArrowsLang from '@/public/images/navbar/arrows-lang.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n@@ -39,13 +39,13 @@\n             <Button>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n-\n                 src={ArrowsLang}\n                 alt={\"Arrows lang.\"}\n                 width={16}\n-                height={16} />\n+                height={16}\n+              />\n \n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n"
+                },
+                {
+                    "date": 1699199912704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react'\n import LogoIcon from '@/public/images/shared/logo.svg'\n-import ArrowsLang from '@/public/images/navbar/arrows-lang.svg'\n+import ArrowsLang from '@/public/images/shared/arrows-lang.svg'\n import Image from 'next/image'\n import { Button } from '@/components/ui/button'\n import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'\n import { useTranslations } from 'next-intl'\n"
+                },
+                {
+                    "date": 1699199919732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n \n               <Image\n                 src={ArrowsLang}\n                 alt={\"Arrows lang.\"}\n-                width={16}\n-                height={16}\n+                width={10}\n+                height={10}\n               />\n \n             </Button>\n           </PopoverTrigger>\n"
+                },
+                {
+                    "date": 1699199925456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,8 @@\n                 alt={\"Arrows lang.\"}\n                 width={10}\n                 height={10}\n               />\n-\n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n"
+                },
+                {
+                    "date": 1699199930974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button>\n+            <Button className='flex items-center gap-2'>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n                 src={ArrowsLang}\n"
+                },
+                {
+                    "date": 1699199950287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button className='flex items-center gap-2'>\n+            <Button className='flex items-center gap-2 font-regular'>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n                 src={ArrowsLang}\n"
+                },
+                {
+                    "date": 1699199968582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n-            <Button className='flex items-center gap-2 font-regular'>\n+            <Button className='flex items-center gap-2 font-light'>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n                 src={ArrowsLang}\n@@ -46,9 +46,9 @@\n                 height={10}\n               />\n             </Button>\n           </PopoverTrigger>\n-          <PopoverContent className=\"bg-white border-[#E4E4E7]\">\n+          <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n                 <p className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n               </Link>\n"
+                },
+                {
+                    "date": 1699199981201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n           </PopoverTrigger>\n           <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n             {new Array(4).fill(0).map((_, i) => (\n               <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n-                <p className='text-black'>{t(`langs.lang-${i + 1}.name`)}</p>\n+                <Button className='text-black'>{t(`langs.lang-${i + 1}.name`)}</Button>\n               </Link>\n             ))}\n           </PopoverContent>\n         </Popover>\n"
+                },
+                {
+                    "date": 1699199993220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,13 +47,16 @@\n               />\n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n-            {new Array(4).fill(0).map((_, i) => (\n-              <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n-                <Button className='text-black'>{t(`langs.lang-${i + 1}.name`)}</Button>\n-              </Link>\n-            ))}\n+            <div>\n+\n+              {new Array(4).fill(0).map((_, i) => (\n+                <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n+                  <Button className='text-black'>{t(`langs.lang-${i + 1}.name`)}</Button>\n+                </Link>\n+              ))}\n+            </div>\n           </PopoverContent>\n         </Popover>\n \n         <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n"
+                },
+                {
+                    "date": 1699200000894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,9 @@\n               />\n             </Button>\n           </PopoverTrigger>\n           <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n-            <div>\n-\n+            <div className='flex flex-col gap-3'>\n               {new Array(4).fill(0).map((_, i) => (\n                 <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n                   <Button className='text-black'>{t(`langs.lang-${i + 1}.name`)}</Button>\n                 </Link>\n"
+                },
+                {
+                    "date": 1699200007265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n           <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n             <div className='flex flex-col gap-3'>\n               {new Array(4).fill(0).map((_, i) => (\n                 <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n-                  <Button className='text-black'>{t(`langs.lang-${i + 1}.name`)}</Button>\n+                  <Button className='text-black w-max'>{t(`langs.lang-${i + 1}.name`)}</Button>\n                 </Link>\n               ))}\n             </div>\n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699200050663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n           <PopoverContent className=\"w-max bg-white border-[#E4E4E7]\">\n             <div className='flex flex-col gap-3'>\n               {new Array(4).fill(0).map((_, i) => (\n                 <Link key={i} href={`/${t(`langs.lang-${i + 1}.locale`)}`}>\n-                  <Button className='text-black w-max'>{t(`langs.lang-${i + 1}.name`)}</Button>\n+                  <Button className='text-black w-full font-light'>{t(`langs.lang-${i + 1}.name`)}</Button>\n                 </Link>\n               ))}\n             </div>\n           </PopoverContent>\n"
+                },
+                {
+                    "date": 1699200066526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,9 @@\n           </PopoverContent>\n         </Popover>\n \n         <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n-          Dashboard\n+          {t(\"dashboardButton.text\")}\n         </Button>\n       </div>\n     </nav>\n   )\n"
+                },
+                {
+                    "date": 1699200155359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,13 @@\n             </div>\n           </PopoverContent>\n         </Popover>\n \n-        <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n-          {t(\"dashboardButton.text\")}\n-        </Button>\n+        <Link>\n+          <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n+            {t(\"dashboardButton.text\")}\n+          </Button>\n+        </Link>\n       </div>\n     </nav>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699200174155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n             </div>\n           </PopoverContent>\n         </Popover>\n \n-        <Link>\n+        <Link href={t(\"dashboardButton.link\")}>\n           <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n             {t(\"dashboardButton.text\")}\n           </Button>\n         </Link>\n"
+                },
+                {
+                    "date": 1699200182646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n             </div>\n           </PopoverContent>\n         </Popover>\n \n-        <Link href={t(\"dashboardButton.link\")}>\n-          <Button variant={\"secondary\"} size={\"lg\"} className='ml-auto'>\n+        <Link href={t(\"dashboardButton.link\")} className='ml-auto'>\n+          <Button variant={\"secondary\"} size={\"lg\"}>\n             {t(\"dashboardButton.text\")}\n           </Button>\n         </Link>\n       </div>\n"
+                },
+                {
+                    "date": 1699200196853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   const t = useTranslations(\"navbar\")\n \n   return (\n     <nav className='border-b border-[#E4E4E7]'>\n-      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white max-md:flex-col max-md:items-start'>\n+      <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n         <Logo />\n \n         <Popover>\n           <PopoverTrigger asChild className='ml-6'>\n"
+                },
+                {
+                    "date": 1699200235177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n             </div>\n           </PopoverContent>\n         </Popover>\n \n-        <Link href={t(\"dashboardButton.link\")} className='ml-auto'>\n+        <Link href={t(\"dashboardButton.link\")} className='ml-auto max-xs:hidden'>\n           <Button variant={\"secondary\"} size={\"lg\"}>\n             {t(\"dashboardButton.text\")}\n           </Button>\n         </Link>\n"
+                },
+                {
+                    "date": 1699200247162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       <div className='max-w-[1280px] flex mx-auto items-center py-6 px-2 overflow-hidden text-white'>\n         <Logo />\n \n         <Popover>\n-          <PopoverTrigger asChild className='ml-6'>\n+          <PopoverTrigger asChild className='ml-6 max-xs:ml-auto'>\n             <Button className='flex items-center gap-2 font-light'>\n               {t(\"langs.lang-1.name\")}\n \n               <Image\n"
+                }
+            ],
+            "date": 1699197844420,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\nexport default function Navbar({ }: Props) {\n  return (\n    <div>Navbar</div>\n  )\n}"
+        }
+    ]
+}

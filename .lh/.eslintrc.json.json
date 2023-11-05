@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".eslintrc.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1699200502741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1699200502741,
+            "name": "Commit-0",
+            "content": "{\n  \"extends\": \"next/core-web-vitals\"\n}\n"
+        }
+    ]
+}

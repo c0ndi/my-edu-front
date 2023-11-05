@@ -1,0 +1,26 @@
+{
+    "sourceFile": "app/18n/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1699186129149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699188878454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     .init(getOptions(lng, ns));\n   return i18nInstance;\n };\n \n-export async function useTranslation(lng, ns, options = {}) {\n+export async function useTranslation(lng: string, ns: string, options = {}) {\n   const i18nextInstance = await initI18next(lng, ns);\n   return {\n     t: i18nextInstance.getFixedT(\n       lng,\n"
+                },
+                {
+                    "date": 1699188988987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,13 +18,10 @@\n };\n \n export async function useTranslation(lng: string, ns: string, options = {}) {\n   const i18nextInstance = await initI18next(lng, ns);\n+\n   return {\n-    t: i18nextInstance.getFixedT(\n-      lng,\n-      Array.isArray(ns) ? ns[0] : ns,\n-      options.keyPrefix\n-    ),\n+    t: i18nextInstance.getFixedT(lng, Array.isArray(ns) ? ns[0] : ns),\n     i18n: i18nextInstance,\n   };\n }\n"
+                }
+            ],
+            "date": 1699186129149,
+            "name": "Commit-0",
+            "content": "import { createInstance } from \"i18next\";\nimport resourcesToBackend from \"i18next-resources-to-backend\";\nimport { initReactI18next } from \"react-i18next/initReactI18next\";\nimport { getOptions } from \"./settings\";\n\nconst initI18next = async (lng: string, ns: string) => {\n  const i18nInstance = createInstance();\n  await i18nInstance\n    .use(initReactI18next)\n    .use(\n      resourcesToBackend(\n        (language: string, namespace: string) =>\n          import(`./locales/${language}/${namespace}.json`)\n      )\n    )\n    .init(getOptions(lng, ns));\n  return i18nInstance;\n};\n\nexport async function useTranslation(lng, ns, options = {}) {\n  const i18nextInstance = await initI18next(lng, ns);\n  return {\n    t: i18nextInstance.getFixedT(\n      lng,\n      Array.isArray(ns) ? ns[0] : ns,\n      options.keyPrefix\n    ),\n    i18n: i18nextInstance,\n  };\n}\n"
+        }
+    ]
+}

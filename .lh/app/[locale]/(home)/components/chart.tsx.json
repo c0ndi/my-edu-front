@@ -1,0 +1,90 @@
+{
+    "sourceFile": "app/[locale]/(home)/components/chart.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1699194124024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699194151391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,79 @@\n import React from 'react'\n+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n \n type Props = {}\n \n+\n+const data = [\n+  {\n+    name: \"Jan\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Feb\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Mar\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Apr\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"May\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Jun\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Jul\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Aug\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Sep\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Oct\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Nov\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+  {\n+    name: \"Dec\",\n+    total: Math.floor(Math.random() * 5000) + 1000,\n+  },\n+]\n export default function Chart({ }: Props) {\n   return (\n-    <div>Chart</div>\n+    <ResponsiveContainer width=\"100%\" height={350}>\n+      <BarChart data={data}>\n+        <XAxis\n+          dataKey=\"name\"\n+          stroke=\"#888888\"\n+          fontSize={12}\n+          tickLine={false}\n+          axisLine={false}\n+        />\n+        <YAxis\n+          stroke=\"#888888\"\n+          fontSize={12}\n+          tickLine={false}\n+          axisLine={false}\n+          tickFormatter={(value) => `$${value}`}\n+        />\n+        <Bar dataKey=\"total\" fill=\"#adfa1d\" radius={[4, 4, 0, 0]} />\n+      </BarChart>\n+    </ResponsiveContainer>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194184274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n+\"use client\"\n+\n import React from 'react'\n import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from \"recharts\"\n \n type Props = {}\n \n-\n const data = [\n   {\n     name: \"Jan\",\n     total: Math.floor(Math.random() * 5000) + 1000,\n@@ -53,8 +54,9 @@\n     name: \"Dec\",\n     total: Math.floor(Math.random() * 5000) + 1000,\n   },\n ]\n+\n export default function Chart({ }: Props) {\n   return (\n     <ResponsiveContainer width=\"100%\" height={350}>\n       <BarChart data={data}>\n"
+                },
+                {
+                    "date": 1699194392271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,15 +61,15 @@\n     <ResponsiveContainer width=\"100%\" height={350}>\n       <BarChart data={data}>\n         <XAxis\n           dataKey=\"name\"\n-          stroke=\"#888888\"\n+          stroke=\"#E54141\"\n           fontSize={12}\n           tickLine={false}\n           axisLine={false}\n         />\n         <YAxis\n-          stroke=\"#888888\"\n+          stroke=\"#E54141\"\n           fontSize={12}\n           tickLine={false}\n           axisLine={false}\n           tickFormatter={(value) => `$${value}`}\n"
+                },
+                {
+                    "date": 1699194400455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,21 +61,21 @@\n     <ResponsiveContainer width=\"100%\" height={350}>\n       <BarChart data={data}>\n         <XAxis\n           dataKey=\"name\"\n-          stroke=\"#E54141\"\n+          stroke=\"#888888\"\n           fontSize={12}\n           tickLine={false}\n           axisLine={false}\n         />\n         <YAxis\n-          stroke=\"#E54141\"\n+          stroke=\"#888888\"\n           fontSize={12}\n           tickLine={false}\n           axisLine={false}\n           tickFormatter={(value) => `$${value}`}\n         />\n-        <Bar dataKey=\"total\" fill=\"#adfa1d\" radius={[4, 4, 0, 0]} />\n+        <Bar dataKey=\"total\" fill=\"#E54141\" radius={[4, 4, 0, 0]} />\n       </BarChart>\n     </ResponsiveContainer>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1699194420988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,9 +71,9 @@\n           stroke=\"#888888\"\n           fontSize={12}\n           tickLine={false}\n           axisLine={false}\n-          tickFormatter={(value) => `$${value}`}\n+          tickFormatter={(value) => `${value}`}\n         />\n         <Bar dataKey=\"total\" fill=\"#E54141\" radius={[4, 4, 0, 0]} />\n       </BarChart>\n     </ResponsiveContainer>\n"
+                },
+                {
+                    "date": 1699194663686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n const data = [\n   {\n     name: \"Jan\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 1000,\n   },\n   {\n     name: \"Feb\",\n     total: Math.floor(Math.random() * 5000) + 1000,\n"
+                },
+                {
+                    "date": 1699194677885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,49 +11,49 @@\n     total: 1000,\n   },\n   {\n     name: \"Feb\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Mar\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Apr\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"May\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Jun\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Jul\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Aug\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Sep\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Oct\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Nov\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n   {\n     name: \"Dec\",\n-    total: Math.floor(Math.random() * 5000) + 1000,\n+    total: 5000,\n   },\n ]\n \n export default function Chart({ }: Props) {\n"
+                },
+                {
+                    "date": 1699194686052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     total: 1000,\n   },\n   {\n     name: \"Feb\",\n-    total: 5000,\n+    total: 1110,\n   },\n   {\n     name: \"Mar\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194691136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     total: 1110,\n   },\n   {\n     name: \"Mar\",\n-    total: 5000,\n+    total: 900,\n   },\n   {\n     name: \"Apr\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194699466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,17 +15,17 @@\n     total: 1110,\n   },\n   {\n     name: \"Mar\",\n-    total: 900,\n+    total: 500,\n   },\n   {\n     name: \"Apr\",\n-    total: 5000,\n+    total: 2400,\n   },\n   {\n     name: \"May\",\n-    total: 5000,\n+    total: 2600,\n   },\n   {\n     name: \"Jun\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194705099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     total: 2400,\n   },\n   {\n     name: \"May\",\n-    total: 2600,\n+    total: 3000,\n   },\n   {\n     name: \"Jun\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194714031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,13 @@\n     total: 3000,\n   },\n   {\n     name: \"Jun\",\n-    total: 5000,\n+    total: 2100,\n   },\n   {\n     name: \"Jul\",\n-    total: 5000,\n+    total: 4000,\n   },\n   {\n     name: \"Aug\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194719478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,13 +31,13 @@\n     total: 2100,\n   },\n   {\n     name: \"Jul\",\n-    total: 4000,\n+    total: 4420,\n   },\n   {\n     name: \"Aug\",\n-    total: 5000,\n+    total: 6969,\n   },\n   {\n     name: \"Sep\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194729986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     total: 4420,\n   },\n   {\n     name: \"Aug\",\n-    total: 6969,\n+    total: 5900,\n   },\n   {\n     name: \"Sep\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194739043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n     total: 5900,\n   },\n   {\n     name: \"Sep\",\n-    total: 5000,\n+    total: 3800,\n   },\n   {\n     name: \"Oct\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194747224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     total: 4420,\n   },\n   {\n     name: \"Aug\",\n-    total: 5900,\n+    total: 4500,\n   },\n   {\n     name: \"Sep\",\n     total: 3800,\n"
+                },
+                {
+                    "date": 1699194804219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     total: 5000,\n   },\n   {\n     name: \"Nov\",\n-    total: 5000,\n+    total: 4000,\n   },\n   {\n     name: \"Dec\",\n     total: 5000,\n"
+                },
+                {
+                    "date": 1699194811362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     total: 4000,\n   },\n   {\n     name: \"Dec\",\n-    total: 5000,\n+    total: 6200,\n   },\n ]\n \n export default function Chart({ }: Props) {\n"
+                }
+            ],
+            "date": 1699194124024,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\ntype Props = {}\n\nexport default function Chart({ }: Props) {\n  return (\n    <div>Chart</div>\n  )\n}"
+        }
+    ]
+}
