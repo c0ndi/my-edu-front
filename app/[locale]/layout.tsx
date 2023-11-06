@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
   const { title, description } = translation.seo
 
   return {
-    title: title,
-    description: description,
+    title: title || "Strona główna - MYEDU",
+    description: description || "Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.",
     openGraph: {
-      images: [`https://my-edu.vercel.app/images/locales/${params.locale || "pl"}/og.png`],
+      images: [`https://my-edu.vercel.app/images/locales/${params.locale || "pl"}/og.png`, "https://my-edu.vercel.app/images/locales/pl/og.png"],
     },
   }
 }
