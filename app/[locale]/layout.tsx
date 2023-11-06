@@ -13,7 +13,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const translation = await import(`../locales/${params.locale}/translation.json`)
+  const translation = await import(`../locales/${params.locale ?? "pl"}/translation.json`)
 
   const { title, description } = translation.seo
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     title: title,
     description: description,
     openGraph: {
-      images: [`https://my-edu.vercel.app/images/locales/${params.locale}/og.png`],
+      images: [`https://my-edu.vercel.app/images/locales/${params.locale ?? "pl"}/og.png`],
     },
   }
 }
