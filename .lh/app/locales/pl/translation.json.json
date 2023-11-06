@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 29,
             "patches": [
                 {
                     "date": 1699193247615,
@@ -104,6 +104,26 @@
                 {
                     "date": 1699220944872,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,18 @@\n         \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n       \"lang-2\": {\n+        \"locale\": \"en\",\n+        \"name\": \"English\"\n+      },\n+      \"lang-3\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n-      \"lang-3\": {\n-        \"locale\": \"en\",\n-        \"name\": \"English\"\n-      },\n       \"lang-4\": {\n         \"locale\": \"de\",\n-        \"name\": \"Niemiecki\"\n+        \"name\": \"Deutsch\"\n       }\n     },\n     \"dashboardButton\": {\n       \"text\": \"Panel\",\n"
+                },
+                {
+                    "date": 1699228182643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n {\n+  \"seo\": {\n+    \"title\": \"My Edu - Strona główna\"\n+  },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n         \"locale\": \"pl\",\n"
+                },
+                {
+                    "date": 1699228191661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n {\n   \"seo\": {\n-    \"title\": \"My Edu - Strona główna\"\n+    \"title\": \"My Edu - Strona główna\",\n+    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n   },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n"
+                },
+                {
+                    "date": 1699228197424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n {\n   \"seo\": {\n     \"title\": \"My Edu - Strona główna\",\n-    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n+    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\",\n+    \n   },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n"
+                },
+                {
+                    "date": 1699228285457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n {\n   \"seo\": {\n     \"title\": \"My Edu - Strona główna\",\n-    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n+    \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\",\n   },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n"
+                },
+                {
+                    "date": 1699228467512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"seo\": {\n-    \"title\": \"My Edu - Strona główna\",\n+    \"title\": \"Strona główna\",\n     \"description\": \"Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.\"\n   },\n   \"navbar\": {\n     \"langs\": {\n"
                 }
             ],
             "date": 1699193247615,

@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Startseite - MYEDU",
+    "description": "Wir stellen ein zukunftsweisendes Bildungsmanagementsystem vor, das Lehrern das Erstellen von personalisierten Tests und Klassenarbeiten sowie das Verwalten von Unterricht und Lehrmaterialien erleichtert."
+  },
   "navbar": {
     "langs": {
       "lang-1": {

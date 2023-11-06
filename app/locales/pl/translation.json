@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Strona główna - MYEDU",
+    "description": "Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi."
+  },
   "navbar": {
     "langs": {
       "lang-1": {

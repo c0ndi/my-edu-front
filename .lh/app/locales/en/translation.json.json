@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1699193588259,
@@ -92,6 +92,10 @@
                 {
                     "date": 1699223311251,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n {\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n+        \"locale\": \"en\",\n+        \"name\": \"English\"\n+      },\n+      \"lang-2\": {\n         \"locale\": \"pl\",\n         \"name\": \"Polski\"\n       },\n-      \"lang-2\": {\n-        \"locale\": \"en\",\n-        \"name\": \"English\"\n-      },\n       \"lang-3\": {\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n"
+                },
+                {
+                    "date": 1699228378796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n {\n+  \"seo\": {\n+    \"title\": \"My Edu - Home Page\",\n+\"description\": \"Introducing a forward-looking education management system that facilitates teachers in designing personalized tests and quizzes, as well as managing lessons and educational materials.\"\n+  },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n         \"locale\": \"en\",\n"
                 }
             ],
             "date": 1699193588259,

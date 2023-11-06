@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1699193621162,
@@ -92,6 +92,18 @@
                 {
                     "date": 1699223296146,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n {\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n-        \"locale\": \"pl\",\n-        \"name\": \"Polski\"\n+        \"locale\": \"de\",\n+        \"name\": \"Deutsch\"\n       },\n       \"lang-2\": {\n         \"locale\": \"en\",\n         \"name\": \"English\"\n@@ -13,10 +13,10 @@\n         \"locale\": \"ua\",\n         \"name\": \"Українська\"\n       },\n       \"lang-4\": {\n-        \"locale\": \"de\",\n-        \"name\": \"Deutsch\"\n+        \"locale\": \"pl\",\n+        \"name\": \"Polski\"\n       }\n     },\n     \"dashboardButton\": {\n       \"text\": \"Dashboard\",\n"
+                },
+                {
+                    "date": 1699228391762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n {\n+  \"seo\": {\n+    \"title\": \"My Edu - Startseite\",\n+    \"description\": \"Wir stellen ein zukunftsweisendes Bildungsmanagementsystem vor, das Lehrern das Erstellen von personalisierten Tests und Klassenarbeiten sowie das Verwalten von Unterricht und Lehrmaterialien erleichtert.\"\n+  },\n   \"navbar\": {\n     \"langs\": {\n       \"lang-1\": {\n         \"locale\": \"de\",\n"
+                },
+                {
+                    "date": 1699228444590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"seo\": {\n-    \"title\": \"My Edu - Startseite\",\n+    \"title\": \"Startseite\",\n     \"description\": \"Wir stellen ein zukunftsweisendes Bildungsmanagementsystem vor, das Lehrern das Erstellen von personalisierten Tests und Klassenarbeiten sowie das Verwalten von Unterricht und Lehrmaterialien erleichtert.\"\n   },\n   \"navbar\": {\n     \"langs\": {\n"
+                },
+                {
+                    "date": 1699228451914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"seo\": {\n-    \"title\": \"Startseite\",\n+    \"title\": \"Startseite - MYEDU\",\n     \"description\": \"Wir stellen ein zukunftsweisendes Bildungsmanagementsystem vor, das Lehrern das Erstellen von personalisierten Tests und Klassenarbeiten sowie das Verwalten von Unterricht und Lehrmaterialien erleichtert.\"\n   },\n   \"navbar\": {\n     \"langs\": {\n"
                 }
             ],
             "date": 1699193621162,

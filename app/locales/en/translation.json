@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Home Page - MYEDU",
+    "description": "Introducing a forward-looking education management system that facilitates teachers in designing personalized tests and quizzes, as well as managing lessons and educational materials."
+  },
   "navbar": {
     "langs": {
       "lang-1": {
