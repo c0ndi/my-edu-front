@@ -8,24 +8,6 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
-type Props = {
-  params: { locale: string }
-}
-
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const translation = await import(`../locales/${params.locale}/translation.json`)
-
-  const { title, description } = translation.seo
-
-  return {
-    title: title,
-    description: description,
-    openGraph: {
-      images: [`https://my-edu.vercel.app/images/locales/${params.locale}/og.png`],
-    },
-  }
-}
-
 export const metadata: Metadata = {
   title: '...',
   description: '...',
