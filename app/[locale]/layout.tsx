@@ -13,18 +13,27 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const translation = await import(`../locales/${params.locale || "pl"}/translation.json`)
+  const translation = await import(`../locales/${params.locale}/translation.json`)
 
   const { title, description } = translation.seo
 
   return {
-    title: title || "Strona główna - MYEDU",
-    description: description || "Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.",
+    title: title,
+    description: description,
     openGraph: {
-      images: [`https://my-edu.vercel.app/images/locales/${params.locale || "pl"}/og.png`, "https://my-edu.vercel.app/images/locales/pl/og.png"],
+      images: [`https://my-edu.vercel.app/images/locales/${params.locale}/og.png`],
     },
   }
 }
+
+export const metadata: Metadata = {
+  title: '...',
+  description: '...',
+  openGraph: {
+    images: [`https://my-edu.vercel.app/images/locales/pl/og.png`],
+  },
+}
+
 
 const locales = ["pl", "en", "ua", "de"];
 
