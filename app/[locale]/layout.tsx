@@ -9,8 +9,8 @@ import { unstable_setRequestLocale } from 'next-intl/server'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '...',
-  description: '...',
+  title: 'Strona główna - MYEDU',
+  description: "Przedstawiamy przyszłościowy system zarządzania edukacją, który ułatwia nauczycielom projektowanie spersonalizowanych testów i klasówek, a także zarządzanie lekcjami i materiałami dydaktycznymi.",
   openGraph: {
     images: [`https://my-edu.vercel.app/images/locales/pl/og.png`],
   },
