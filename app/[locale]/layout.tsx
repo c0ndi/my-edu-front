@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     title: title,
     description: description,
     openGraph: {
-      images: [`/images/locales/${params.locale}/og.png`],
+      images: [`https://my-edu.vercel.app/images/locales/${params.locale}/og.png`],
     },
   }
 }
