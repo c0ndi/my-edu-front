@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 32,
+            "activePatchIndex": 34,
             "patches": [
                 {
                     "date": 1699189342794,
@@ -136,6 +136,14 @@
                 {
                     "date": 1699258973076,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,28 @@\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n import Navbar from './components/navbar'\n+import { ResolvingMetadata } from 'next'\n \n+type Props = {\n+  params: { locale: string }\n+}\n+\n+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {\n+  const translation = await import(`../locales/${params.locale}/translation.json`)\n+\n+  const { title, description } = translation.seo\n+\n+  return {\n+    title: title,\n+    description: description,\n+    openGraph: {\n+      images: [`https://my-edu.vercel.app/images/locales/${params.locale}/og.png`],\n+    },\n+  }\n+}\n+\n export default function Home() {\n   return (\n     <main>\n       <div className='bg-[#fff]'>\n"
+                },
+                {
+                    "date": 1699259024505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import About from './components/about'\n import App from './components/app'\n import Footer from './components/footer'\n import Navbar from './components/navbar'\n-import { ResolvingMetadata } from 'next'\n+import { Metadata, ResolvingMetadata } from 'next'\n \n type Props = {\n   params: { locale: string }\n }\n"
+                },
+                {
+                    "date": 1699259042292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   params: { locale: string }\n }\n \n export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {\n-  const translation = await import(`../locales/${params.locale}/translation.json`)\n+  const translation = await import(`../../locales/${params.locale}/translation.json`)\n \n   const { title, description } = translation.seo\n \n   return {\n"
                 }
             ],
             "date": 1699189342794,

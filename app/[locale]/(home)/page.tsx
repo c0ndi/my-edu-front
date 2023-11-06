@@ -3,14 +3,14 @@ import About from './components/about'
 import App from './components/app'
 import Footer from './components/footer'
 import Navbar from './components/navbar'
-import { ResolvingMetadata } from 'next'
+import { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
   params: { locale: string }
 }
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const translation = await import(`../locales/${params.locale}/translation.json`)
+  const translation = await import(`../../locales/${params.locale}/translation.json`)
 
   const { title, description } = translation.seo
 
