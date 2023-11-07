@@ -59,3 +59,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+.loading {
+  animation: loading 5s forwards;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+    100% {
+        opacity: 0;
+    }
+}
