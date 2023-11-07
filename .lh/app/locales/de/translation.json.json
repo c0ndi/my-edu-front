@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 24,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1699193621162,
@@ -104,6 +104,10 @@
                 {
                     "date": 1699228451914,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\n   \"seo\": {\n-    \"title\": \"Startseite\",\n+    \"title\": \"Startseite - MYEDU\",\n     \"description\": \"Wir stellen ein zukunftsweisendes Bildungsmanagementsystem vor, das Lehrern das Erstellen von personalisierten Tests und Klassenarbeiten sowie das Verwalten von Unterricht und Lehrmaterialien erleichtert.\"\n   },\n   \"navbar\": {\n     \"langs\": {\n"
+                },
+                {
+                    "date": 1699397805602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n       \"link\": \"/de/#about\"\n     },\n     \"link-2\": {\n       \"text\": \"Examifast\",\n-      \"link\": \"https://link-examifast.de\"\n+      \"link\": \"https://github.com/pgalka0/quizker-mobile \"\n     },\n     \"link-3\": {\n       \"text\": \"Verordnungen\",\n       \"link\": \"/de/terms-and-conditions\"\n"
                 }
             ],
             "date": 1699193621162,
