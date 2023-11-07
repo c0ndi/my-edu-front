@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/[locale]/dashboard/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1699397976559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1699397976559,
+            "name": "Commit-0",
+            "content": "export default function DashboardPage() {\n  return (\n    <div className=\"bg-[#1e1e1e]\">\n        <iframe className=\"w-full h-screen\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6E9whMDdNaYxDESlGnDExU%2FMYEDU-%252B-Quizker%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DgHk26DbTMXqrCLLq-1\"></iframe>\n        <div className=\"absolute bottom-0 w-full h-16 bg-[#1e1e1e]\"></div>\n    </div>\n  )\n}\n"
+        }
+    ]
+}
